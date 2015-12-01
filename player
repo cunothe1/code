@@ -1,0 +1,8 @@
+
+//When there are no walls, create light, move, leave trail
+if place_free(x,y-16){instance_create(x,y-32,light);if keyboard_check_released(ord("W")){instance_create(x,y,trail);y-=32}};
+if place_free(x-16,y){instance_create(x-32,y,light);if keyboard_check_released(ord("A")){instance_create(x,y,trail);x-=32}};
+if place_free(x,y+16){instance_create(x,y+32,light);if keyboard_check_released(ord("S")){instance_create(x,y,trail);y+=32}};
+if place_free(x+16,y){instance_create(x+32,y,light);if keyboard_check_released(ord("D")){instance_create(x,y,trail);x+=32}};
+//show message when on same trail
+if 
