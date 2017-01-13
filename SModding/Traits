@@ -11,18 +11,50 @@ Fleet_Commander={
     navy_size_add=5
     }
   leader_trait=yes
-  leader_class=admiral
+  leader_class={admiral}
   icon="gfx/interface/icons/.........."
   }
-Fleet_Agressor{
+  
+Fleet_Agressor={
   cost=1
-  initial=yes
+  initial=no
   modification=yes
-  
-  
-  
-  
-  
-  
-  
+  modifier={
+    ship_fire_rate_mult=0.2
+    ship_shield_hp_mult=-0.1
+    ship_hitpoints_mult=-0.2
+    ship_weapon_range_mult=0.5
+    }
   }
+  leader_trait=yes
+  leader_class={admiral}
+  opposites={Fleet_Defender}
+  requires_traits={Fleet_Commander}
+  icon="gfx/interface/icons/.........."
+
+Fleet_Defender={
+  cost=1
+  initial=no
+  modification=yes
+  modifier={
+    ship_fire_rate_mult=-0.2
+    ship_shield_hp_mult=0.2
+    ship_hitpoints_mult=-0.2
+    }
+  }
+  leader_trait=yes
+  leader_class={admiral}
+  opposites={Fleet_Agressor}
+  requires_traits={Fleet_Commander}
+  icon="gfx/interface/icons/.........."
+  
+Grand_Admiral={
+  cost=3
+  initial=no
+  modification=yes
+  modifier={
+    ship_fire_rate_mult=0.1
+    ship_weapon_range_mult=0.3
+    ship_hitpoints_mult=0.1
+    }
+}
