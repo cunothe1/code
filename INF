@@ -32,7 +32,7 @@ SELECT BOEKNR
 FROM RESERVERINGEN
 ORDER BY BOEKNR ASC;
 ================================
-4.1
+4.1-----------------------------
 a)
 SELECT *
 FROM LEERLINGEN
@@ -49,8 +49,7 @@ d)
 SELECT BOEKNR, TITEL
 FROM AUTEURS, BOEKEN
 WHERE 
-================================
-4.2
+4.2-----------------------------
 a)
 SELECT *
 FROM LEERLINGEN
@@ -72,12 +71,12 @@ d)
 SELECT *
 FROM AUTERS
 WHERE VOORNAAM LIKE "*William*"
-================================///
-5.1
+================================
+5.1-----------------------------<><><><><><><><>
 a)
 SELECT *
 FROM LEERLINGEN
-WHERE STRAAT = "Julianaweg" AND PLAATS = "Utrecht" AND KLAS = "*6*";
+WHERE STRAAT = "Julianaweg" AND PLAATS = "Utrecht" AND KLAS LIKE "*6*";
 b)
 SELECT *
 FROM LEERLINGEN
@@ -86,8 +85,7 @@ c)
 SELECT *
 FROM LEERLINGEN
 WHERE PLAATS = "Bunnik" OR PLAATS = "Schaalwijk";
-================================
-5.2
+5.2-----------------------------
 a)
 SELECT *
 FROM RESERVERINGEN
@@ -99,15 +97,14 @@ WHERE NOT PLAATS = "Utrecht";
 c)
 SELECT *
 FROM LEERLINGEN
-WHERE NOT KLAS = "*4*";
+WHERE NOT KLAS LIKE "*4*";
 d)
 SELECT *
 FROM LEERLINGEN
 WHERE NOT TUSSENVOEGSEL IS NULL;
 e)
 NOT vervangen door <>
-================================
-5.3
+5.3-----------------------------
 a) Ik ben rebel, ik deed dit niet alleen mijn breincapaciteit is genoeg om deze query uit te kunnen voeren
 b) Hij kijkt naar welke leerlingen uit 5b in utrecht wonen, maar hij kijkt ook naar welke leerlingen van de school in bunnik wonen
 c) Hetzelfde als in de reken volgorde
@@ -116,3 +113,66 @@ SELECT *
 FROM LEERLINGEN
 WHERE KLAS = "5b" AND PLAATS = "Utrecht" OR KLAS = "5b" AND PLAATS = "Bunnik";
 e) er is niks  anders omdat er een error in het tweede deel zit sindsdat % niet werkt in onze versie van access, bij een normale versie zou er weldegelijk een verschil zijn,
+5.4-----------------------------
+a)
+SELECT *
+FROM LEERLINGEN
+WHERE POSTCODE LIKE "352*B"
+OR POSTCODE LIKE "352*P"
+OR POSTCODE LIKE "352*R";
+b)
+SELECT *
+FROM LEERLINGEN
+WHERE GESLACHT = "m" AND GEB_DATUM < #28-jul-1997# AND POSTCODE LIKE "352*" AND ( GEB_DATUM > #28-jul-1996# OR ( GEB_DATUM > #28-jul-1995# AND POSTCODE LIKE "3523*" ) )
+================================
+6.1-----------------------------
+a)
+SELECT MAX(BOETE)
+FROM UITLENINGEN;
+b)
+
+
+================================
+================================
+OEFENBLAD
+1)
+SELECT ACHTERNAAM, KLAS, PLAATS
+FROM LEERLINGEN
+WHERE PLAATS = "Schalkwijk";
+2)
+SELECT LLNR, BOETE
+FROM UITLENINGEN
+WHERE BOETE = "2.00";
+3)
+SELECT TITEL
+FROM BOEKEN
+WHERE RUBRIEK = "Nederlands";
+4)
+SELECT AANTALPAGS
+FROM BOEKEN
+WHERE TITEL = "The Lord of the rings";
+5)
+SELECT TITEL, PUB_JAAR
+FROM BOEKEN
+WHERE PUB_JAAR > 1980;
+6)
+SELECT TITEL, PUB_JAAR
+FROM BOEKEN
+WHERE PUB_JAAR >= 1940 AND PUB_JAAR <= 1945;
+7)
+SELECT *
+FROM LEERLINGEN
+WHERE MONTH (GEB_DATUM) = 9
+AND DAY (GEB_DATUM) >= 4
+AND DAY (GEB_DATUM) <= 10
+8)
+SELECT TITEL
+FROM BOEKEN
+WHERE AANTALPAGS > 500;
+
+SELECT B.TITEL, A.VOORNAAM, A.TUSSENVOEGSEL, A.ACHTERNAAM, B.AANTALPAGS
+FROM BOEKEN B, AUTEURS A
+WHERE B.AANTALPAGS > 500
+AND A.AUTEURNR = B.AUTEURNR;
+================================
+================================
