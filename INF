@@ -71,4 +71,48 @@ Van de vos Reynaarde
 d)
 SELECT *
 FROM AUTERS
-WHERE VOORNAAM LIKE "%William%"
+WHERE VOORNAAM LIKE "*William*"
+================================///
+5.1
+a)
+SELECT *
+FROM LEERLINGEN
+WHERE STRAAT = "Julianaweg" AND PLAATS = "Utrecht" AND KLAS = "*6*";
+b)
+SELECT *
+FROM LEERLINGEN
+WHERE GEB_DATUM > #1-jan-1996#;
+c)
+SELECT *
+FROM LEERLINGEN
+WHERE PLAATS = "Bunnik" OR PLAATS = "Schaalwijk";
+================================
+5.2
+a)
+SELECT *
+FROM RESERVERINGEN
+WHERE NOT DATUM_BESCHIKBAAR IS NULL OR WHERE DATUM_RESERVERING IS NULL;
+b)
+SELECT *
+FROM LEERLINGEN
+WHERE NOT PLAATS = "Utrecht";
+c)
+SELECT *
+FROM LEERLINGEN
+WHERE NOT KLAS = "*4*";
+d)
+SELECT *
+FROM LEERLINGEN
+WHERE NOT TUSSENVOEGSEL IS NULL;
+e)
+NOT vervangen door <>
+================================
+5.3
+a) Ik ben rebel, ik deed dit niet alleen mijn breincapaciteit is genoeg om deze query uit te kunnen voeren
+b) Hij kijkt naar welke leerlingen uit 5b in utrecht wonen, maar hij kijkt ook naar welke leerlingen van de school in bunnik wonen
+c) Hetzelfde als in de reken volgorde
+d) 
+SELECT *
+FROM LEERLINGEN
+WHERE KLAS = "5b" AND PLAATS = "Utrecht" OR KLAS = "5b" AND PLAATS = "Bunnik";
+e) er is niks  anders omdat er een error in het tweede deel zit sindsdat % niet werkt in onze versie van access, bij een normale versie zou er weldegelijk een verschil zijn,
