@@ -284,6 +284,41 @@ c)
 
 
 
+===============================
+Kamer
+1)
+SELECT COUNT(*)
+FROM kamer
+WHERE naam LIKE "*(v)*";
+2)
+SELECT COUNT(*)
+FROM kamer
+WHERE naam LIKE "*(m)*";
+3)
+SELECT *
+FROM kamer
+WHERE NOT naam LIKE "*(v)*" OR NOT naam LIKE "(*m*)";
+
+4)
+SELECT *
+FROM kamer
+WHERE stemmen IN (
+SELEC MIN(stemmen)
+FROM kamer;
+)
+5)
+SELECT woonplaats, COUNT(*)
+FROM kamer
+GROUP BY woonplaats
+HAVING COUNT(*) > 3;
+6)
+SELECT *
+FROM kamer
+WHERE stemmen > (
+SELECT stemmen
+FROM kamer
+WHERE naam LIKE "*Wilders*" )
+7)
 
 
 
