@@ -246,6 +246,8 @@ WHERE a.AUTEURNR = b.AUTEURNR
 AND b.BOEKNR = u.BOEKNR
 AND u.LLNR = l.LLNR
 AND l.KLAS LIKE "6*"
+AND b.rubriek = "Nederlands"
+AND u.DATUM_TERUG IS NULL;
 ================================
 9.1-----------------------------
 SELECT b.TITEL, e.UITLEENBAAR
