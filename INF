@@ -283,6 +283,27 @@ c)
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 ===============================
 Insert oefening
 a)
@@ -294,6 +315,8 @@ c)
 auteur, omdat er in de boeken wordt verwezen naar een niet bestaand auteur nummer anders. Dus dan werkt het niet.
 d)
 UPDATE leerlingen SET STRAAT = "Veldwacherserf", HUISNUMMER = 14, PLAATS = "Houten", POSTCODE = "3991KW" WHERE VOORNAAM = "Rafael" AND ACHTERNAAM = "Menendez";
+e)
+DELETE FROM EXEMPLAREN WHERE BOEKNR = 185 AND EXNR = 2;
 ===============================
 Kamer
 1)
@@ -329,8 +352,6 @@ SELECT stemmen
 FROM kamer
 WHERE naam LIKE "*Wilders*" )
 7)
-
-
 
 ================================
 ================================
