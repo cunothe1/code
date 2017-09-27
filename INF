@@ -283,9 +283,17 @@ c)
 
 
 
-
-
-
+===============================
+Insert oefening
+a)
+INSERT INTO BOEKEN VALUES (328, 124, "Kathys dochter", 2004, 207, "roman", "nederlands");
+b)
+INSERT INTO AUTEURS VALUES (191, "Vincent", "V", null, "Bijlo", 1965, null);
+INSERT INTO BOEKEN VALUES (329, 191, "instituut", 2005, 112, "novelle", "nederlands");
+c)
+auteur, omdat er in de boeken wordt verwezen naar een niet bestaand auteur nummer anders. Dus dan werkt het niet.
+d)
+UPDATE leerlingen SET STRAAT = "Veldwacherserf", HUISNUMMER = 14, PLAATS = "Houten", POSTCODE = "3991KW" WHERE VOORNAAM = "Rafael" AND ACHTERNAAM = "Menendez";
 ===============================
 Kamer
 1)
