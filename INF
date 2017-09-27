@@ -272,6 +272,7 @@ AND b.BOEKNR = r.BOEKNR
 AND r.LLNR = l.LLNR
 AND r.STATUS = "beschikbaar"
 c)
+
 =======================/=================
 
 
