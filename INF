@@ -1,4 +1,52 @@
 ================================
+H11=============================
+================================
+1.1-----------------------------
+a)
+naar boeknr in boeken
+naar llnr in leerlingen
+b)
+boeknr
+llnr
+datum_r
+c)
+boeknr
+llnr
+datum_r
+d)
+boeknr
+exnr
+llnr
+datum_uit
+e)
+UITLENINGEN--llnr--LEERLINGEN--RESERVERINGEN
+UITLENINGEN--boeknr&exnr--EXEMPLAREN--boeknr--BOEKEN--boeknr--RESERVERINGEN
+1.2-----------------------------
+a)
+het ziet er anders uit
+b)
+dikgedrukt
+2.1-----------------------------
+CREATE TABLE LEERLINGEN (
+llnr SMALLINT NOT NULL ,
+voornaam VARCHAR NOT NULL ,
+tussenv VARCHAR ,
+achternaam VARCHAR NOT NULL ,
+straat VARCHAR NOT NULL ,
+huisnummer SMALLINT NOT NULL ,
+POSTCODE VARCHAR NOT NULL ,
+plaats VARCHAR NOT NULL , 
+telefoon SMALLINT ,
+geslacht ENUM("m","v") NOT NULL ,
+geb_datum DATE NOT NULL ,
+klas VARCHAR ,
+PRIMARY KEY (llnr)
+)
+2.2-----------------------------
+
+================================
+H8==============================
+================================
 3.1-----------------------------
 a)
 SELECT *
