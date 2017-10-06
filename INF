@@ -395,6 +395,15 @@ WHERE b.biercode = s.biercode AND
          SELECT MAX(alcohol)
          FROM bier
          ) ;
+5
+SELECT naam
+FROM kroeg
+WHERE kroegcode in (
+   SELECT kroegcode
+   FROM schenkt
+   GROUP BY kroegcode
+   HAVING COUNT (kroegcode) > 6
+   ) ;
 
 ===============================
 Insert oefening
