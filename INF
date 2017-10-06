@@ -353,6 +353,49 @@ c)
 
 
 
+
+
+
+
+
+===============================
+===========Bieren==============
+===============================
+1
+SELECT naam
+FROM bier
+WHERE stijl LIKE "*MILD*"
+2
+SELECT naam, alcohol
+FROM bier
+WHERE alcohol > 10
+ORDER BY alcohol;
+3
+SELECT naam, land
+FROM brouwer
+WHERE land LIKE "*ENG*";
+4
+SELECT naam, adres
+FROM kroeg
+WHERE adres LIKE "*SPUI*" AND plaats = "AMSTERDAM";
+
+1
+SELECT COUNT(*)
+FROM brouwer
+WHERE naam in (
+SELECT DISTINCT naam
+FROM brouwer
+) ;
+2
+SELECT k.naam, b.naam, b.alcohol
+FROM kroeg k, bier b, schenkt s
+WHERE b.biercode = s.biercode AND 
+      k.kroegcode = s.kroegcode AND 
+      b.alcohol in (
+         SELECT MAX(alcohol)
+         FROM bier
+         ) ;
+
 ===============================
 Insert oefening
 a)
