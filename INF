@@ -38,7 +38,8 @@ huisnummer SMALLINT NOT NULL ,
 POSTCODE VARCHAR NOT NULL ,
 plaats VARCHAR NOT NULL , 
 telefoon SMALLINT ,
-geslacht ENUM("m","v") NOT NULL ,
+geslacht VARCHAR NOT NULL ,
+CONSTRAINT chk_geslacht CHECK ( geslacht IN ( 'm' , 'v' ) ) ,
 geb_datum DATE NOT NULL ,
 klas VARCHAR ,
 PRIMARY KEY (llnr)
@@ -53,8 +54,15 @@ status VARCHAR ,
 CONSTRAINT key PRIMARY KEY (boeknr, llnr, datum_r)
 ) ;
 2.4-----------------------------
-CONSTRAINT CK_Payroll_Salary 
-CHECK (Salary > 10.00 and Salary < 150000.00)
+On the Fields tab, in the Field Validation group, click Validation, and then click Field Validation Rule.
+
+
+
+
+
+
+
+
 
 ================================
 H8==============================
