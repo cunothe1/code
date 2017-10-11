@@ -1,3 +1,16 @@
+08 20 - 09 10
+09 10 - 10 00
+10 00 - 10 50
+
+11 10 - 12 00
+12 00 - 12 50
+
+13 20 - 14 10
+14 10 - 15 00
+15 00 - 15 50
+
+
+
 ================================
 H11=============================
 ================================
@@ -38,8 +51,7 @@ huisnummer SMALLINT NOT NULL ,
 POSTCODE VARCHAR NOT NULL ,
 plaats VARCHAR NOT NULL , 
 telefoon SMALLINT ,
-geslacht VARCHAR NOT NULL ,
-CONSTRAINT chk_geslacht CHECK ( geslacht IN ( 'm' , 'v' ) ) ,
+geslacht char(1) ,
 geb_datum DATE NOT NULL ,
 klas VARCHAR ,
 PRIMARY KEY (llnr)
@@ -52,6 +64,7 @@ datum_b DATE ,
 kosten_bet DECIMAL (5,2) ,
 status VARCHAR ,
 CONSTRAINT key PRIMARY KEY (boeknr, llnr, datum_r)
+
 ) ;
 2.4-----------------------------
 On the Fields tab, in the Field Validation group, click Validation, and then click Field Validation Rule.
