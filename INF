@@ -26,6 +26,7 @@ a)
 het ziet er anders uit
 b)
 dikgedrukt
+
 2.1-----------------------------
 CREATE TABLE LEERLINGEN (
 llnr SMALLINT NOT NULL ,
@@ -41,8 +42,19 @@ geslacht ENUM("m","v") NOT NULL ,
 geb_datum DATE NOT NULL ,
 klas VARCHAR ,
 PRIMARY KEY (llnr)
-)
-2.2-----------------------------
+) ;
+CREATE TABLE RESERVERINGEN (
+REFERENCE BOEKEN(boeknr) ,
+REFERENCE LEERLINGEN(llnr) ,
+datum_r DATE ,
+datum_b DATE ,
+kosten_bet DECIMAL (5,2) ,
+status VARCHAR ,
+CONSTRAINT key PRIMARY KEY (boeknr, llnr, datum_r)
+) ;
+2.4-----------------------------
+CONSTRAINT CK_Payroll_Salary 
+CHECK (Salary > 10.00 and Salary < 150000.00)
 
 ================================
 H8==============================
