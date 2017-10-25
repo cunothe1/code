@@ -122,7 +122,8 @@ DELETE FROM UITLENINGEN WHERE
 LLNR = 122 AND BOEKNR = 71;
 
 2.6-----------------------------
-
+a)
+INSERT INTO TEAMS
 
 
 
