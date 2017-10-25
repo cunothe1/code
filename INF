@@ -1,3 +1,7 @@
+$1 opdr. 1.1 en 1.2, 
+$2 opdr. 2.1, 2.2 2.4, 2.5, 2.6 en 2.7 
+$3 opdr. 3.1 en 3.2 
+
 08 20 - 09 10
 09 10 - 10 00
 10 00 - 10 50
@@ -36,7 +40,7 @@ UITLENINGEN--llnr--LEERLINGEN--RESERVERINGEN
 UITLENINGEN--boeknr&exnr--EXEMPLAREN--boeknr--BOEKEN--boeknr--RESERVERINGEN
 1.2-----------------------------
 a)
-het ziet er anders uit
+het ziet er anders uit, maar het is voor het meeste hetzelfde. Echter wordt "niet leeg" niet aangegeven
 b)
 dikgedrukt
 
@@ -78,25 +82,23 @@ CREATE TABLE LEDEN (
   telefoon CHAR(10) ,
   geslacht CHAR(1) NOT NULL ,
   gebdatum DATE NOT NULL ,
-  team SMALLINT NOT NULL ,
+  teamnr INT REFERENCES TEAMS (teamnr) ,
   PRIMARY KEY(lidnr)
   )
 CREATE TABLE TEAMS (
-  REFERENCE LEDEN(team) ,
-  REFERENCE WEDSTRIJDEN(teamnr) , 
+  teamnr INT NOT NULL ,
   klasse VARCHAR NOT NULL ,
   poule VARCHAR NOT NULL ,
   aanvoerder VARCHAR ,
-  FOREIGN KEY(teamnr) ,
   PRIMARY KEY(teamnr)
   )
 CREATE TABLE WEDSTRIJDEN (
-  teamnr SMALLINT NOT NULL ,
+  teamnr INT REFERENCES TEAMS (teamnr) ,
   datum DATE NOT NULL ,
   tegen_club VARCHAR NOT NULL ,
   tegen_team VARCHAR NOT NULL ,
   uit_thuis VARCHAR NOT NULL ,
-  CONSTRAINT key PRIMARY KEY ( teamnr , datum )
+  CONSTRAINT teamnr PRIMARY KEY ( teamnr , datum )
   )
 
 2.4-----------------------------
@@ -104,8 +106,22 @@ On the Fields tab, in the Field Validation group, click Validation, and then cli
 
 2.5-----------------------------
 
+De reservering die Rob de Witte (llnr 122) op 25 februari 2009 gemaakt zou 
+hebben voor boek 71 blijkt een administratieve fout. Schrijf de SQL-instructie 
+om de reservering uit de bibliotheekdatabase te verwijderen.
 
+a) INSERT INTO UITLENINGEN VALUES (13, 1, 83, 3-3-2006, NULL, 0) ;
+b) UPDATE LEERLINGEN SET
+STRAAT = "Veldwachterserf" ,
+HUISNUMMER = 14 ,
+PLAATS = "Houten" ,
+POSTCODE = "3991KW"
+WHERE VOORNAAM = "Rafael" AND ACHTERNAAM = "Menendez" ;
+c)
+DELETE FROM UITLENINGEN WHERE 
+LLNR = 122 AND BOEKNR = 71;
 
+2.6-----------------------------
 
 
 
