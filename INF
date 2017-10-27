@@ -123,42 +123,34 @@ LLNR = 122 AND BOEKNR = 71;
 
 2.6-----------------------------
 a)
-INSERT INTO TEAMS VALUES 
-(1, A, 1, Niklas Leeuwin),
-(2, A, 1, Cuno Nasserie),
-(3, B, 1, Theo Roos),
-(4, B, 1, Michel Schuivens),
-(5, A, 2, Riecardo den Haan),
-(6, A, 2, Lara Los);
+INSERT INTO TEAMS (*) VALUES 
+(1, "A", "1", "Niklas Leeuwin"),
+(2, "A", "1", "Cuno Nasserie"),
+(3, "B", "1", "Theo Roos"),
+(4, "B", "1", "Michel Schuivens"),
+(5, "A", "2", "Riecardo den Haan"),
+(6, "A", "2", "Lara Los");
+
 INSERT INTO LEDEN VALUES
-(1, Cuno, NULL, Nasserie, Koolmeesstraat 193, 2406LX, Alphen a/d Rijn, NULL, m, 18-04-2000, 1),
-(2, , NULL, , Molenallee 150, 7384AP, Wilp, NULL, v, 18-04-2000, 1),
-(3, , NULL, , Helmstraat 81, 1975DP, IJmuiden, NULL, m, 23-06-2000, 1),
-(4, , NULL, , Steltloper 41, 2693AE, s-Gravenzande, NULL, m, 18-08-2000, 2),
-(5, , NULL, , Terbaansweg 112, 6044VX, Roermond, NULL, m, 30-10-2000, 2),
-(6, , NULL, , Toernooiveld 71, 1683NH, Zwaagdijk, NULL, m, 08-12-2000, 2),
-(7, , NULL, , Boezemweg 155, 3255MC, Oude-Tonge, NULL, m, 28-02-2000, 3),
-(8, , NULL, , Bugelstraat 50, 5402HR, Uden, NULL, v, 12-04-2000, 3),
-(9, , NULL, , Liduinaplein 118, 3055LH, Rotterdam, NULL, v, 17-06-2000, 3),
-(10, , NULL, , Saxofoonweg 40, 1312WC, Almere, NULL, m, 19-07-2000, 4),
-(11, , NULL, , Jadedrift 23, 3436BK, Nieuwegein, NULL, v, 03-10-2000, 4),
-(12, , NULL, , Buisweg 76, 1222EZ, Hilversum, NULL, m, 12-12-2000, 4),
-(13, , NULL, , Haanse Hoef 76, 5105NB, Dongen, NULL, m, 14-03-2000, 5),
-(14, , NULL, , Filipijnen 24, 3524JM, Utrecht, NULL, v, 16-04-2000, 5),
-(15, , NULL, , Dieselstraat 122, 3112KC, Schiedam, NULL, v, 24-01-2000, 5),
-(16, , NULL, , , 2531BA, Den Haag, NULL, v, 28-05-2000, 6),
-(17, , NULL, , , , NULL, v, 05-09-2000, 6),
-(18, , NULL, , , , NULL, v, 06-11-2000, 6),
+(1, "Cuno", NULL, "Nasserie", "Koolmeesstraat 193, 2406LX, Alphen a/d Rijn, NULL, "m", 18-04-2000, 1),
+(2, "Kiete", "van der", "Laan", "Molenallee 150", "7384AP", "Wilp", NULL, "v", 18-04-2000, 1),
+(3, "Brendan", NULL, "Mcdade", "Helmstraat 81", "1975DP", "IJmuiden", NULL, "m", 23-06-2000, 1),
+(4, "Niklas", NULL, "Leeuwin", "Steltloper 41", "2693AE", "s-Gravenzande", NULL, "m", 18-08-2000, 2),
+(5, "Brandon", "van der", "Aardweg", "Terbaansweg 112", "6044VX", "Roermond", NULL, "m", 30-10-2000, 2),
+(6, "Teun", NULL, "Aarsen", "Toernooiveld 71", "1683NH", "Zwaagdijk", NULL, "m", 08-12-2000, 2),
+(7, "Theo", NULL, "Roos", "Boezemweg 155", "3255MC", "Oude-Tonge", NULL, "m", 28-02-2000, 3),
+(8, "Ton", NULL, "Out", "Bugelstraat 50", "5402HR", "Uden", NULL, "v", 12-04-2000, 3),
+(9, "Nazi", NULL, "Meyer", "Liduinaplein 118", "3055LH", "Rotterdam", NULL, "v", 17-06-2000, 3),
+(10, "Michel", NULL, "Schuivens", "Saxofoonweg 40", "1312WC", "Almere", NULL, "m", 19-07-2000, 4),
+(11, "Alice", NULL, "Rijcken", "Jadedrift 23", "3436BK", "Nieuwegein", NULL, "v", 03-10-2000, 4),
+(12, "Ton", NULL, "Velzeboer", "Buisweg 76", "1222EZ", "Hilversum", NULL, "m", 12-12-2000, 4),
+(13, "Riecardo", "den", "Haan", "Haanse Hoef 76", "5105NB", "Dongen", NULL, "m", 14-03-2000, 5),
+(14, "Mellanie", NULL, "Palabos", "Filipijnen 24", "3524JM", "Utrecht", NULL, "v", 16-04-2000, 5),
+(15, "Angelique", "de", "Jong", "Dieselstraat 122", "3112KC", "Schiedam", NULL, "v", 24-01-2000, 5),
+(16, "Lara", NULL, "Los", "Verzetslaan 51", "1749KB", "Warmenhuizen", NULL, "v", 28-05-2000, 6),
+(17, "Emilie", NULL, "Nogwat", "Dongedal 180", "2904CE", "Capelle aan den IJssel", NULL, "v", 05-09-2000, 6),
+(18, "Tessa", NULL, "Hoogeterp", "Overijsselhaven 73", "3433PH", "Nieuwegein", NULL, "v", 06-11-2000, 6);
 
-
-  adres VARCHAR NOT NULL,
-  postcode CHAR(6) NOT NULL,
-  plaats VARCHAR NOT NULL,
-  telefoon CHAR(10) ,
-  geslacht CHAR(1) NOT NULL ,
-  gebdatum DATE NOT NULL ,
-  teamnr INT REFERENCES TEAMS (teamnr) ,
-  PRIMARY KEY(lidnr)
 
 
 
