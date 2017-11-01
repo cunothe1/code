@@ -1,6 +1,8 @@
 $1 opdr. 1.1 en 1.2, 
 $2 opdr. 2.1, 2.2 2.4, 2.5, 2.6 en 2.7 
 $3 opdr. 3.1 en 3.2 
+V1.1 V1.2 V1.3 V1.4
+V2.3
 
 08 20 - 09 10
 09 10 - 10 00
@@ -122,34 +124,152 @@ DELETE FROM UITLENINGEN WHERE
 LLNR = 122 AND BOEKNR = 71;
 
 2.6-----------------------------
-a)
-INSERT INTO TEAMS (*) VALUES 
-(1, "A", "1", "Niklas Leeuwin"),
-(2, "A", "1", "Cuno Nasserie"),
-(3, "B", "1", "Theo Roos"),
-(4, "B", "1", "Michel Schuivens"),
-(5, "A", "2", "Riecardo den Haan"),
-(6, "A", "2", "Lara Los");
+a) Omdat we een oude versie gebruiken van MS access, is het niet mogelijk om op de normale manieren meerdere rijen min een querie te doen.
 
-INSERT INTO LEDEN VALUES
-(1, "Cuno", NULL, "Nasserie", "Koolmeesstraat 193, 2406LX, Alphen a/d Rijn, NULL, "m", 18-04-2000, 1),
-(2, "Kiete", "van der", "Laan", "Molenallee 150", "7384AP", "Wilp", NULL, "v", 18-04-2000, 1),
-(3, "Brendan", NULL, "Mcdade", "Helmstraat 81", "1975DP", "IJmuiden", NULL, "m", 23-06-2000, 1),
-(4, "Niklas", NULL, "Leeuwin", "Steltloper 41", "2693AE", "s-Gravenzande", NULL, "m", 18-08-2000, 2),
-(5, "Brandon", "van der", "Aardweg", "Terbaansweg 112", "6044VX", "Roermond", NULL, "m", 30-10-2000, 2),
-(6, "Teun", NULL, "Aarsen", "Toernooiveld 71", "1683NH", "Zwaagdijk", NULL, "m", 08-12-2000, 2),
-(7, "Theo", NULL, "Roos", "Boezemweg 155", "3255MC", "Oude-Tonge", NULL, "m", 28-02-2000, 3),
-(8, "Ton", NULL, "Out", "Bugelstraat 50", "5402HR", "Uden", NULL, "v", 12-04-2000, 3),
-(9, "Nazi", NULL, "Meyer", "Liduinaplein 118", "3055LH", "Rotterdam", NULL, "v", 17-06-2000, 3),
-(10, "Michel", NULL, "Schuivens", "Saxofoonweg 40", "1312WC", "Almere", NULL, "m", 19-07-2000, 4),
-(11, "Alice", NULL, "Rijcken", "Jadedrift 23", "3436BK", "Nieuwegein", NULL, "v", 03-10-2000, 4),
-(12, "Ton", NULL, "Velzeboer", "Buisweg 76", "1222EZ", "Hilversum", NULL, "m", 12-12-2000, 4),
-(13, "Riecardo", "den", "Haan", "Haanse Hoef 76", "5105NB", "Dongen", NULL, "m", 14-03-2000, 5),
-(14, "Mellanie", NULL, "Palabos", "Filipijnen 24", "3524JM", "Utrecht", NULL, "v", 16-04-2000, 5),
-(15, "Angelique", "de", "Jong", "Dieselstraat 122", "3112KC", "Schiedam", NULL, "v", 24-01-2000, 5),
-(16, "Lara", NULL, "Los", "Verzetslaan 51", "1749KB", "Warmenhuizen", NULL, "v", 28-05-2000, 6),
-(17, "Emilie", NULL, "Nogwat", "Dongedal 180", "2904CE", "Capelle aan den IJssel", NULL, "v", 05-09-2000, 6),
-(18, "Tessa", NULL, "Hoogeterp", "Overijsselhaven 73", "3433PH", "Nieuwegein", NULL, "v", 06-11-2000, 6);
+INSERT INTO TEAMS VALUES (1, "A", "1", "Niklas Leeuwin");
+INSERT INTO TEAMS VALUES (2, "A", "1", "Cuno Nasserie");
+INSERT INTO TEAMS VALUES (3, "B", "1", "Theo Roos");
+INSERT INTO TEAMS VALUES (4, "B", "1", "Michel Schuivens");
+INSERT INTO TEAMS VALUES (5, "A", "2", "Riecardo den Haan");
+INSERT INTO TEAMS VALUES (6, "A", "2", "Lara Los");
+
+INSERT INTO LEDEN VALUES (1, "Cuno", NULL, "Nasserie", "Koolmeesstraat 193", "2406LX", "Alphen a/d Rijn", NULL, "m", '18-04-2000', 1);
+INSERT INTO LEDEN VALUES (2, "Kiete", "van der", "Laan", "Molenallee 150", "7384AP", "Wilp", NULL, "v", '18-04-2000', 1);
+INSERT INTO LEDEN VALUES (3, "Brendan", NULL, "Mcdade", "Helmstraat 81", "1975DP", "IJmuiden", NULL, "m", '23-06-2000', 1);
+INSERT INTO LEDEN VALUES (4, "Niklas", NULL, "Leeuwin", "Steltloper 41", "2693AE", "s-Gravenzande", NULL, "m", '18-08-2000', 2);
+INSERT INTO LEDEN VALUES (5, "Brandon", "van der", "Aardweg", "Terbaansweg 112", "6044VX", "Roermond", NULL, "m", '30-10-2000', 2);
+INSERT INTO LEDEN VALUES (6, "Teun", NULL, "Aarsen", "Toernooiveld 71", "1683NH", "Zwaagdijk", NULL, "m", '08-12-2000', 2);
+INSERT INTO LEDEN VALUES (7, "Theo", NULL, "Roos", "Boezemweg 155", "3255MC", "Oude-Tonge", NULL, "m", '28-02-2000', 3);
+INSERT INTO LEDEN VALUES (8, "Ton", NULL, "Out", "Bugelstraat 50", "5402HR", "Uden", NULL, "v", '12-04-2000', 3);
+INSERT INTO LEDEN VALUES (9, "Nazi", NULL, "Meyer", "Liduinaplein 118", "3055LH", "Rotterdam", NULL, "v", '17-06-2000', 3);
+INSERT INTO LEDEN VALUES (10, "Michel", NULL, "Schuivens", "Saxofoonweg 40", "1312WC", "Almere", NULL, "m", '19-07-2000', 4);
+INSERT INTO LEDEN VALUES (11, "Alice", NULL, "Rijcken", "Jadedrift 23", "3436BK", "Nieuwegein", NULL, "v", '03-10-2000', 4);
+INSERT INTO LEDEN VALUES (12, "Ton", NULL, "Velzeboer", "Buisweg 76", "1222EZ", "Hilversum", NULL, "m", '12-12-2000', 4);
+INSERT INTO LEDEN VALUES (13, "Riecardo", "den", "Haan", "Haanse Hoef 76", "5105NB", "Dongen", NULL, "m", '14-03-2000', 5);
+INSERT INTO LEDEN VALUES (14, "Mellanie", NULL, "Palabos", "Filipijnen 24", "3524JM", "Utrecht", NULL, "v", '16-04-2000', 5);
+INSERT INTO LEDEN VALUES (15, "Angelique", "de", "Jong", "Dieselstraat 122", "3112KC", "Schiedam", NULL, "v", '24-01-2000', 5);
+INSERT INTO LEDEN VALUES (16, "Lara", NULL, "Los", "Verzetslaan 51", "1749KB", "Warmenhuizen", NULL, "v", '28-05-2000', 6);
+INSERT INTO LEDEN VALUES (17, "Emilie", NULL, "Nogwat", "Dongedal 180", "2904CE", "Capelle aan den IJssel", NULL, "v", '05-09-2000', 6);
+INSERT INTO LEDEN VALUES (18, "Tessa", NULL, "Hoogeterp", "Overijsselhaven 73", "3433PH", "Nieuwegein", NULL, "v", '06-11-2000', 6);
+INSERT INTO LEDEN VALUES (19, "Willemse", NULL, "Willemse", "Willemselaan 7", "7777WI", "Willemse", NULL, "m", '06-11-2000', 3)
+
+INSERT INTO WEDSTRIJDEN VALUES (1, '1-11-2017', "AC", 2, "4-3");
+INSERT INTO WEDSTRIJDEN VALUES (2, '1-11-2017', "AC", 1, "3-4");
+INSERT INTO WEDSTRIJDEN VALUES (3, '1-11-2017', "AC", 4, "3-0");
+INSERT INTO WEDSTRIJDEN VALUES (4, '1-11-2017', "AC", 3, "0-3");
+INSERT INTO WEDSTRIJDEN VALUES (5, '1-11-2017', "AC", 6, "2-3");
+INSERT INTO WEDSTRIJDEN VALUES (6, '1-11-2017', "AC", 5, "3-2");
+INSERT INTO WEDSTRIJDEN VALUES (2, '4-11-2017', "AC", 5, "3-4");
+INSERT INTO WEDSTRIJDEN VALUES (5, '4-11-2017', "AC", 2, "4-3");
+
+b)
+INSERT INTO TEAMS VALUES (7, "C", "12", "Theo Roos");
+
+c)
+UPDATE LEDEN
+SET teamnr = 7
+WHERE teamnr = 3;
+
+d)
+DELETE FROM LEDEN
+WHERE voornaam = "Willemse";
+
+2.7-----------------------------
+a) 
+gedaan
+b)
+voer een geldige waarde in voor het veld LEERLINGEN.LLNR.
+Dit zegt ie omdat LLNR het eerste veld is in de rij dat niet leeg mag zijn en niet is ingevuld. Als je LLNR invult en op de volgende rij klkt zal hij de volgende NL regel ingevuld willen hebben
+c)
+geslacht: tik  m of v in!
+Dit zegt ie omdat er een voorwaarde is ingesteld dat er alleen een m of een v ingevuld mag worden.
+d)
+voer een geldige waarde in voor het veld LEERLINGEN.GEB_DATUM
+Dit zegt ie omdat het het volgende NL is die niet is ingevuld. Maar dit is niet waar de opdracht op doelt.
+"De opgegeven wijzigingen zijn niet aangebracht in de tabel omdat daardoor dubbele waarden ontstaan in de index, primaire sleutel of relatie. Wijzig de gegevens in het veld of de velden met dubbele gegevens, verwijder de index of definieer de index oopnieuw zodat dubbele items zijn toegestaan. Probeer het vervolgens opnieuw"
+Dit zegt ie omdat er geen dubbele waardes mogen voorkomen in de primaire sleutel.
+e)
+U kunt geen record toevoegen of wijzigen omdat voor de tabel LEERLINGEN een gerelateerde record vereist is.
+
+3.1-----------------------------
+Bestand->openen->database->exclusief openen
+bestand->versleutelen met wachtwoord
+Super geheim wachtwoord ingevoerd
+dubbelklik op database en er werd een super geheim wachtwoord gevraagd die ik invoerde en het werkt nu weer
+
+3.2-----------------------------
+a)
+Persoonsgegevens mogen alleen in overeenstemming met de wet en op een behoorlijke en zorgvuldige manier worden verwerkt.
+Persoonsgegevens mogen alleen voor welbepaalde, vooraf uitdrukkelijk omschreven en gerechtvaardigde doeleinden worden verzameld. En vervolgens alleen verder worden verwerkt voor doeleinden die daarmee verenigbaar zijn.
+Degene van wie persoonsgegevens worden verwerkt (de betrokkene genoemd), moet ten minste op de hoogte zijn van de identiteit van de organisatie of persoon die deze persoonsgegevens verwerkt (de zogeheten verantwoordelijke) en van het doel van de gegevensverwerking.
+De gegevensverwerking moeten op een passende manier worden beveiligd. Voor bijzondere gegevens, zoals over ras, gezondheid en geloofsovertuiging, gelden extra strenge regels.
+b)
+Mensen hebben recht op inzage in hun persoonsgegevens. Dat houdt in dat zij een organisatie mogen vragen of deze persoonsgegevens van hen heeft vastgelegd en zo ja, welke. Zij hoeven geen reden te geven voor een inzageverzoek.
+c)ok
+d)ok
+
+
+
+
+V1.1----------------------------
+dit heet V1.3 omdat IA super slecht is.
+
+a)
+1
+100
+b)
+50
+c)
+Is het meer dan 50? nee
+is het meer dan 25? nee
+is het meer dan 12? nee
+is het meer dan 6? ja
+is het meer dan 9? ja
+is het meer dan 10? nee
+dus het is 10
+6 vragen
+d)
+6
+e)
+1 500
+2 9
+f)
+2000: 10
+4000: 11
+8000: 12
+16000: 13
+32000: 14
+64000: 15
+128000: 16
+256000: 17
+512000: 18
+1024000: 19
+2048000: 20
+4096000: 21
+8192000: 22
+16381000: 23
+
+V1.2----------------------------
+a)
+<Johnson?
+<Terburg?
+<Zwart?
+b)
+<Johnson?
+<Hofman?
+<Jansen?
+c)
+Dan kom je uit op een loop
+Commandeur < Johnson
+Commandeur < Hofman
+
+
+
+
+
+
+
+
 
 
 
