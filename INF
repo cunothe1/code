@@ -234,6 +234,10 @@ e)
 1 500
 2 9
 f)
+125: 6
+250: 7
+500: 8
+1000: 9
 2000: 10
 4000: 11
 8000: 12
@@ -259,17 +263,74 @@ b)
 <Hofman?
 <Jansen?
 c)
-Dan kom je uit op een loop
+Dan kom je uit op Bekens
 Commandeur < Johnson
 Commandeur < Hofman
+!Commandeur < Beekens
+--->Beekens
+d)
+V=aantal vragen, L=lengte van de lijst met namen
+2^V=L dus ^2log(L)=V (V omhoog afronden)
+Dus je hebt het logaritme met grondtal 2 nodig waarbij de inhoud van de logaritme het aantal opties is. 
+e)
+^2log(1000)=9.96578 dus 10 stappen.
+9 kan tot 512 namen
+10 kan tot 1024 namen
 
+V1.3----------------------------
+Ansems
+Beekens
+Hofman
+Jansen
+Johnson
+Lopulalan
+Terburg
+Zwart
 
+a)
+Ansems
+Beekens
+Hofman
+Jansen
+Johnson
+Lopulalan
+Riksen
+Terburg
+Zwart
 
+<Terburg word <Riksen
+<Zwart word <Terburg
+en als !<Terburg
+komt <Zwart erbij als extra vraag.
+b)
+Ansems
+Beekens
+Jansen
+Johnson
+Lopulalan
+Terburg
+Zwart
 
+<hofman word <Jansen
+!<jansen leid tot uitkomst Jansen
 
+V1.4----------------------------
+a)
+het leerling nummer bij de achternaam. Als er een vervelend kind bij de administratie hu;lp nodig heeft en hij zijn leerling nummer niet weet of de administratief medewerker beleefd om de naam vraagt ipv een nummer
+Datum_terug bij een leerlingnummer en boek. Als een leerling wilt weten wanneer hij/zij het boek weer moet inleveren
+b)
+LEERLINGEN.ACHTERNAAM
+c)
+CREATE INDEX Leerlingnummer
+ON LEERLINGEN (ACHTERNAAM)
 
-
-
+V2.3----------------------------
+a)
+De java applet werkt niet.
+b)
+de java applet werkt niet.
+c)
+de 
 
 
 
