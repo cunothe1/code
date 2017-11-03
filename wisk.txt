@@ -1,0 +1,33 @@
+xmax=25;
+xmin=-25;
+xscale=10;
+ymax=20;
+ymin=-20;
+yscale=10;
+
+pmax=0;
+
+GenPoint=0;
+GenLine=0;
+GenCircle=0;
+MakePoint=0;
+MakeLine=0;
+MakeCircle=0;
+
+//ox[Object,Line]
+//+line=point1 -line=point2
+//pi1x=3 pi1y=2 px[i]=3 py[i]=
+
+if (GenPoint=1) {
+  r=round(random(2xmax))+xmin;
+  p[pmax,x]=r
+  r=round(random(2ymax))+ymin;
+  p[pmax,y]=r
+  pmax+=1;
+  }
+if (SelectPoint=1) {
+  for (i=0;i<pmax+0.1;i+=1;) {
+    if (round(mouse_x/xscale)=p[i,x]){
+      if (round(mouse_y/yscale)=p[i,y]) {
+        PointSelected=i;
+  } } } }
