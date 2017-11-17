@@ -321,6 +321,22 @@ De Java Applet werkt niet
 
 
 PO------------------------------
+lid id
+wedstrijd id
+team
+team voor
+team tegen
+score
+
+
+CREATE TABLE SCHEIDS (
+  scheidnr INT NOT NULL,
+  naam VARCHAR NOT NULL,
+  PRIMARY KEY(scheidnr)
+  )
+
+INSERT INTO LEDEN VALUES (20, "Peter", NULL, "Peterse", "Peterstraat 5", "555PT", "Peterdam", NULL, "m", '13-08-2000', 3)
+
 
 
 
