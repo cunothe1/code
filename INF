@@ -329,13 +329,55 @@ team tegen
 score
 
 
+
+INSERT INTO LEDEN VALUES (20, "Peter", NULL, "Peterse", "Peterstraat 5", "555PT", "Peterdam", NULL, "m", '13-08-2000', 3)
+
+
+CREATE TABLE TEAMS (
+  teamnr INT NOT NULL ,
+  klasse VARCHAR NOT NULL ,
+  poule VARCHAR NOT NULL ,
+  aanvoerder VARCHAR ,
+  PRIMARY KEY(teamnr)
+  )
+  
+CREATE TABLE LEDEN (
+  lidnr SMALLINT NOT NULL ,
+  voornaam VARCHAR NOT NULL ,
+  tussenv VARCHAR ,
+  achternaam VARCHAR NOT NULL ,
+  adres VARCHAR NOT NULL,
+  postcode CHAR(6) NOT NULL,
+  plaats VARCHAR NOT NULL,
+  telefoon CHAR(10) ,
+  geslacht CHAR(1) NOT NULL ,
+  gebdatum DATE NOT NULL ,
+  team INT REFERENCES TEAMS (teamnr) ,
+  PRIMARY KEY(lidnr)
+  )
+
+CREATE TABLE WEDSTRIJDEN (
+  teamnr INT REFERENCES TEAMS (teamnr) ,
+  datum DATE NOT NULL ,
+  scheids INT REFERENCES SCHEIDS (scheidnr) ,
+  tegen_club VARCHAR NOT NULL ,
+  tegen_team VARCHAR NOT NULL ,
+  uit_thuis VARCHAR NOT NULL ,
+  CONSTRAINT teamnr PRIMARY KEY ( teamnr , datum )
+)
+
 CREATE TABLE SCHEIDS (
   scheidnr INT NOT NULL,
   naam VARCHAR NOT NULL,
+  gebdatum DATE NOT NULL,
+  adres VARCHAR NOT NULL,
+  postcode CHAR(6) NOT NULL,
+  telefoon CHAR(10),
   PRIMARY KEY(scheidnr)
   )
 
-INSERT INTO LEDEN VALUES (20, "Peter", NULL, "Peterse", "Peterstraat 5", "555PT", "Peterdam", NULL, "m", '13-08-2000', 3)
+
+
 
 
 
