@@ -339,13 +339,11 @@ CREATE TABLE TEAMS (
   poule VARCHAR NOT NULL ,
   aanvoerder VARCHAR ,
   PRIMARY KEY(teamnr)
-  )
+  ) ;
   
 CREATE TABLE LEDEN (
-  lidnr SMALLINT NOT NULL ,
-  voornaam VARCHAR NOT NULL ,
-  tussenv VARCHAR ,
-  achternaam VARCHAR NOT NULL ,
+  lidnr INT NOT NULL ,
+  naam VARCHAR NOT NULL ,
   adres VARCHAR NOT NULL,
   postcode CHAR(6) NOT NULL,
   plaats VARCHAR NOT NULL,
@@ -354,17 +352,7 @@ CREATE TABLE LEDEN (
   gebdatum DATE NOT NULL ,
   team INT REFERENCES TEAMS (teamnr) ,
   PRIMARY KEY(lidnr)
-  )
-
-CREATE TABLE WEDSTRIJDEN (
-  teamnr INT REFERENCES TEAMS (teamnr) ,
-  datum DATE NOT NULL ,
-  scheids INT REFERENCES SCHEIDS (scheidnr) ,
-  tegen_club VARCHAR NOT NULL ,
-  tegen_team VARCHAR NOT NULL ,
-  uit_thuis VARCHAR NOT NULL ,
-  CONSTRAINT teamnr PRIMARY KEY ( teamnr , datum )
-)
+  ) ;
 
 CREATE TABLE SCHEIDS (
   scheidnr INT NOT NULL,
@@ -374,12 +362,58 @@ CREATE TABLE SCHEIDS (
   postcode CHAR(6) NOT NULL,
   telefoon CHAR(10),
   PRIMARY KEY(scheidnr)
-  )
+  ) ;
 
+CREATE TABLE WEDSTRIJDEN (
+  teamnr INT REFERENCES TEAMS (teamnr) ,
+  datum DATE NOT NULL ,
+  scheids INT REFERENCES SCHEIDS (scheidnr) ,
+  tegen_club VARCHAR NOT NULL ,
+  tegen_team VARCHAR NOT NULL ,
+  uit_thuis VARCHAR NOT NULL ,
+  CONSTRAINT teamnr PRIMARY KEY ( teamnr , datum )
+  ) ;
 
+INSERT INTO TEAMS VALUES (0,"A","1","Cuno Nasserie") Rick Lodewijcks
+INSERT INTO TEAMS VALUES (1,"A","1","Sjoerd Brouwer") Yannick Egges
+INSERT INTO TEAMS VALUES (2,"A","1","Niklas Leeuwin") Brandon van der Aardweg
+INSERT INTO TEAMS VALUES (3,"A","2","Valentijn Vermeij") Kiete van der Laan
+INSERT INTO TEAMS VALUES (4,"A","2","Brendan Mcdade")Riecardo den Haan
+INSERT INTO TEAMS VALUES (5,"A","2","Mellanie Palabos") Angelique Verweij
+INSERT INTO TEAMS VALUES (6,"A","3","Lara Los") Tessa Hoogeterp
+INSERT INTO TEAMS VALUES (7,"A","3","Vincent van den Heuvel") Boris Braam
+INSERT INTO TEAMS VALUES (8,"A","3","Faye Sifneos") Lara Wegloop
+INSERT INTO TEAMS VALUES (9,"B","1","Alice Rijcken") Ton Velzeboer
+INSERT INTO TEAMS VALUES (10,"B","1","Johanni Pfeiffer") Adolf Habets
+INSERT INTO TEAMS VALUES (11,"B","1","Michel Schuivens") Ton ten Holder
+INSERT INTO TEAMS VALUES (12,"B","1","Theo Roos") Ton Out
 
-
-
+INSERT INTO LEDEN VALUES (0,"","","","","","m",'',0);
+INSERT INTO LEDEN VALUES (1,"","","","","","m",'',0);
+INSERT INTO LEDEN VALUES (2,"","","","","","m",'',1);
+INSERT INTO LEDEN VALUES (3,"","","","","","m",'',1);
+INSERT INTO LEDEN VALUES (4,"","","","","","m",'',2);
+INSERT INTO LEDEN VALUES (5,"","","","","","m",'',2);
+INSERT INTO LEDEN VALUES (6,"","","","","","m",'',3);
+INSERT INTO LEDEN VALUES (7,"","","","","","m",'',3);
+INSERT INTO LEDEN VALUES (8,"","","","","","m",'',4);
+INSERT INTO LEDEN VALUES (9,"","","","","","m",'',4);
+INSERT INTO LEDEN VALUES (10,"","","","","","m",'',5);
+INSERT INTO LEDEN VALUES (11,"","","","","","m",'',5);
+INSERT INTO LEDEN VALUES (12,"","","","","","m",'',6);
+INSERT INTO LEDEN VALUES (13,"","","","","","m",'',6);
+INSERT INTO LEDEN VALUES (14,"","","","","","m",'',7);
+INSERT INTO LEDEN VALUES (15,"","","","","","m",'',7);
+INSERT INTO LEDEN VALUES (16,"","","","","","m",'',8);
+INSERT INTO LEDEN VALUES (17,"","","","","","m",'',8);
+INSERT INTO LEDEN VALUES (18,"","","","","","m",'',9);
+INSERT INTO LEDEN VALUES (19,"","","","","","m",'',9);
+INSERT INTO LEDEN VALUES (20,"","","","","","m",'',10);
+INSERT INTO LEDEN VALUES (21,"","","","","","m",'',10);
+INSERT INTO LEDEN VALUES (22,"","","","","","m",'',11);
+INSERT INTO LEDEN VALUES (23,"","","","","","m",'',11);
+INSERT INTO LEDEN VALUES (24,"","","","","","m",'',12);
+INSERT INTO LEDEN VALUES (25,"","","","","","m",'',12);
 
 
 
