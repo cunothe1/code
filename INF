@@ -415,7 +415,20 @@ INSERT INTO LEDEN VALUES (23,"","","","","","m",'',11);
 INSERT INTO LEDEN VALUES (24,"","","","","","m",'',12);
 INSERT INTO LEDEN VALUES (25,"","","","","","m",'',12);
 
-
+INSERT INTO `leden` (`lidnr`, `naam`, `adres`, `postcode`, `plaats`, `telefoon`, `geslacht`, `geb_datum`, `team`) VALUES
+(1, 'Rick Lodewijcks', 'Lindelaan 5', '1102TF', 'Amsterdam', '0628463727', 'm', '2000-06-12', 1),
+(2, 'Sjoerd Brouwer', 'Peterlaan 17', '2171AD', 'Aalsmeer', '9435678125', 'm', '2000-10-19', 2),
+(3, 'Yannick Egges', 'Melkweg 14', '2173DD', 'Aalsmeer', '2451679835', 'm', '2000-04-18', 2),
+(4, 'Niklas Leeuwin', 'Felix Meritus 666', '3482AF', 'Mijdrecht', '1645283765', 'm', '2000-04-18', 3),
+(5, 'Brandon van der Aardweg', 'Mijnweg 4', '3483FD', 'Mijdrecht', '9465873154', 'm', '2000-04-18', 3),
+(6, 'Valentijn Vermeij', 'Tara van Alphen weg 8', '1183GF', 'Amstelveen', '9465378465', 'm', '2000-04-18', 4),
+(7, 'Kiete van der Laan', 'Dijkweg 122', '6032PT', 'Haarlem', '4576598356', 'v, '2000-04-18', 4),
+(8, 'Brandon Mcdade', 'Mcdude straat 4', '4132IU', 'Uithoorn', '2451356497', 'm', '2000-04-18', 5),
+(9, 'Riecardo den Haan', 'Schefe Bomenlaan 24', '1188AG', 'Nes a/d Amstel', '6497583154', 'm', '2000-04-18', 5),
+(10, 'Mellanie Palabos', 'Lange Lindelaan 82', '1185BG', 'Amstelveen', '6497584316', 'v', '2000-04-18', 6),
+(11, 'Angelique Verweij', 'Korte Lindelaan 82', '2175IU', 'Aalsmeer', '6798355244', 'v', '2000-04-18', 6),
+(12, 'Lara Los', 'The Middle Of No Where 0', '0000OO', 'Mexico', '4446597813', 'v', '2000-04-18', 7),
+(13, 'Tessa Hoogeterp', 'Aardappelstraat 25', '1188GB', 'Nes a/d Amstel', '6497851342', 'v', '2000-04-18', 7)
 
 
 
