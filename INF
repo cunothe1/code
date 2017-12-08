@@ -388,33 +388,6 @@ INSERT INTO TEAMS VALUES (10,"B","1","Johanni Pfeiffer") Adolf Habets
 INSERT INTO TEAMS VALUES (11,"B","1","Michel Schuivens") Ton ten Holder
 INSERT INTO TEAMS VALUES (12,"B","1","Theo Roos") Ton Out
 
-INSERT INTO LEDEN VALUES (0,"","","","","","m",'',0);
-INSERT INTO LEDEN VALUES (1,"","","","","","m",'',0);
-INSERT INTO LEDEN VALUES (2,"","","","","","m",'',1);
-INSERT INTO LEDEN VALUES (3,"","","","","","m",'',1);
-INSERT INTO LEDEN VALUES (4,"","","","","","m",'',2);
-INSERT INTO LEDEN VALUES (5,"","","","","","m",'',2);
-INSERT INTO LEDEN VALUES (6,"","","","","","m",'',3);
-INSERT INTO LEDEN VALUES (7,"","","","","","m",'',3);
-INSERT INTO LEDEN VALUES (8,"","","","","","m",'',4);
-INSERT INTO LEDEN VALUES (9,"","","","","","m",'',4);
-INSERT INTO LEDEN VALUES (10,"","","","","","m",'',5);
-INSERT INTO LEDEN VALUES (11,"","","","","","m",'',5);
-INSERT INTO LEDEN VALUES (12,"","","","","","m",'',6);
-INSERT INTO LEDEN VALUES (13,"","","","","","m",'',6);
-INSERT INTO LEDEN VALUES (14,"","","","","","m",'',7);
-INSERT INTO LEDEN VALUES (15,"","","","","","m",'',7);
-INSERT INTO LEDEN VALUES (16,"","","","","","m",'',8);
-INSERT INTO LEDEN VALUES (17,"","","","","","m",'',8);
-INSERT INTO LEDEN VALUES (18,"","","","","","m",'',9);
-INSERT INTO LEDEN VALUES (19,"","","","","","m",'',9);
-INSERT INTO LEDEN VALUES (20,"","","","","","m",'',10);
-INSERT INTO LEDEN VALUES (21,"","","","","","m",'',10);
-INSERT INTO LEDEN VALUES (22,"","","","","","m",'',11);
-INSERT INTO LEDEN VALUES (23,"","","","","","m",'',11);
-INSERT INTO LEDEN VALUES (24,"","","","","","m",'',12);
-INSERT INTO LEDEN VALUES (25,"","","","","","m",'',12);
-
 INSERT INTO `leden` (`lidnr`, `naam`, `adres`, `postcode`, `plaats`, `telefoon`, `geslacht`, `geb_datum`, `team`) VALUES
 (1, 'Rick Lodewijcks', 'Lindelaan 5', '1102TF', 'Amsterdam', '0628463727', 'm', '2000-06-12', 1),
 (2, 'Sjoerd Brouwer', 'Peterlaan 17', '2171AD', 'Aalsmeer', '9435678125', 'm', '2000-10-19', 2),
@@ -422,13 +395,25 @@ INSERT INTO `leden` (`lidnr`, `naam`, `adres`, `postcode`, `plaats`, `telefoon`,
 (4, 'Niklas Leeuwin', 'Felix Meritus 666', '3482AF', 'Mijdrecht', '1645283765', 'm', '2000-04-18', 3),
 (5, 'Brandon van der Aardweg', 'Mijnweg 4', '3483FD', 'Mijdrecht', '9465873154', 'm', '2000-04-18', 3),
 (6, 'Valentijn Vermeij', 'Tara van Alphen weg 8', '1183GF', 'Amstelveen', '9465378465', 'm', '2000-04-18', 4),
-(7, 'Kiete van der Laan', 'Dijkweg 122', '6032PT', 'Haarlem', '4576598356', 'v, '2000-04-18', 4),
-(8, 'Brandon Mcdade', 'Mcdude straat 4', '4132IU', 'Uithoorn', '2451356497', 'm', '2000-04-18', 5),
+(7, 'Kiete van der Laan', 'Dijkweg 122', '6032PT', 'Haarlem', '4576598356', 'v', '2000-04-18', 4),
+(8, 'Brendan Mcdade', 'Mcdude straat 4', '4132IU', 'Uithoorn', '2451356497', 'm', '2000-04-18', 5),
 (9, 'Riecardo den Haan', 'Schefe Bomenlaan 24', '1188AG', 'Nes a/d Amstel', '6497583154', 'm', '2000-04-18', 5),
 (10, 'Mellanie Palabos', 'Lange Lindelaan 82', '1185BG', 'Amstelveen', '6497584316', 'v', '2000-04-18', 6),
 (11, 'Angelique Verweij', 'Korte Lindelaan 82', '2175IU', 'Aalsmeer', '6798355244', 'v', '2000-04-18', 6),
 (12, 'Lara Los', 'The Middle Of No Where 0', '0000OO', 'Mexico', '4446597813', 'v', '2000-04-18', 7),
-(13, 'Tessa Hoogeterp', 'Aardappelstraat 25', '1188GB', 'Nes a/d Amstel', '6497851342', 'v', '2000-04-18', 7)
+(13, 'Tessa Hoogeterp', 'Aardappelstraat 25', '1188GB', 'Nes a/d Amstel', '6497851342', 'v', '2000-04-18', 7),
+(14,'Vincent van den Heuvel','Annapolaklaan 10','1187TD','Amstelveen','3164578965','m','2000-03-11',8),
+(15,'Boris Braam','Rapportlaan 12','4133GF','Uithoorn','6431598752','m','2000-06-28',8),
+(16,'Faye Sifneos','Annapolaklaan 6','1187PX','Amstelveen','6497853645','v','1964-06-26',9),
+(17,'Lara Wegloop','Nieuwe weg 15','2172TY','Aalsmeer','9784653987','v','1986-04-04',9),
+(18,'Alice Rijcken','Literatuurstraat 14','2174AF','Aalsmeer','6497875346','v','1924-02-17',10),
+(19,'Johanni Pfeiffer','Volgordelaan 3','1183FD','Amstelveen','6541758476','m','1945-09-08',11),
+(20,'Ton Velzeboer','Foutieve straat 15','1185UC','Amstelveen',','6431598752','m','2000-06-28',10),
+(21,'Adolf Habets','Liederenlaan 81','1184AF','Amstelveen','8967168314','m','1997-01-01',11),
+(22,'Michel Shuivens','Succes is een keuze 5','8031GV','Amsterdam','1386413561','m','1965-08-15',12),
+(23,'Ton ten Holder','Helpweg 14','4133DE','Uithoorn','1354641786','m','1935-07-04',12),
+(24,'Theo Roos','Pedolaan 5','1185PR','Amstelveen','1386315631','m','1959-06-13',13),
+(25,'Ton Out','Strengweg 7','1183QE','Amstelveen','1436814863','m','1968-05-27',13);
 
 
 
