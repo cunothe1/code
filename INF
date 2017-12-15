@@ -4,12 +4,18 @@ $3 opdr. 3.1 en 3.2
 V1.1 V1.2 V1.3 V1.4
 V2.3
 
-CREATE TABLE teams (
-  teamnr int NOT NULL,
-  klasse char(1) NOT NULL,
-  poule char(1) NOT NULL,
-  aanvoerder varchar NOT NULL,
-  PRIMARY KEY (teamnr) );
+Evaluatie
+De opgaven
+Het maken van de opgaves ging heel makkelijk omdat ik het hoofdstuk eigenlijk al eens heb gehad en dus al genoeg had geoefent en een goede basiskennis had. Hierdoor ben ik tegen weinig problemen aangelopen behalve de applet van verdieping 2.3 die het niet deed.
+Database start
+Ik was gestart met het maken van een extra tabel, waarbij ik zorgvuldig ging denken wat ik erin wilde hebben. Eerst wilde ik dat alle scheidsrechters leden zouden zijn, maar dat zou een reference loop veroorzaken, wat voor problemen kan zorgen.
+
+Het invullen van de tabellen leverde problemen op. Vorig jaar werkte we met phpmyadmin en kon je meerdere regels invullen met één insert query. Bij access was dit niet mogelijk dus heb ik in mijn bestand overal maar insert into gezet en alle rijen een voor een gekopieerd.
+PHPmyadmin
+Terwijl we werkte met access ben ik PHPmyadmin helemaal verleerd. Het gebruikt een andere syntax en het toevoegen van tabellen via SQL lukte me niet. Dus heb ik maar net zoals de rest de tabellen toegevoegd via het programma zelf, wat wel heel makkelijk ging. Ik was blij toen ik hele tabellen met één insert query kon invullen.
+Site
+Omdat github niet werkt met php, heb ik maar gewoon instant link gemaakt van mijn index.html naar de database, hierdoor merk je zelf niet dat je wordt doorgestuurd en krijg je alsnog de database als je naar http://informatica.ghlyceum.nl/users/38348/ gaat. Ik had wel alle tabellen, ipv één, op de site gezet, dit was erg makkelijk omdat ik maar gewoon extra resultaat variabelen maakte en het originele script kopieerde. Ik weet niet precies wat wat doet, maar ik wist wat de functie van een stuk was en ik veranderde de waardes die nodig waren. Ook heb ik het in daadwerkelijke tabellen gezet omdat het anders pijn doet aan mijn ogen. Dat deed ik door middel van de tabel functie in html en elke output regel werd als een nieuwe regel gemaakt in het tabel.
+
   
 
 
