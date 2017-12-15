@@ -369,6 +369,7 @@ CREATE TABLE SCHEIDS (
   gebdatum DATE NOT NULL,
   adres VARCHAR NOT NULL,
   postcode CHAR(6) NOT NULL,
+  plaats VARCHAR NOT NULL,
   telefoon CHAR(10),
   PRIMARY KEY(scheidnr)
   ) ;
@@ -383,19 +384,63 @@ CREATE TABLE WEDSTRIJDEN (
   CONSTRAINT teamnr PRIMARY KEY ( teamnr , datum )
   ) ;
 
-INSERT INTO TEAMS VALUES (0,"A","1","Cuno Nasserie") Rick Lodewijcks
-INSERT INTO TEAMS VALUES (1,"A","1","Sjoerd Brouwer") Yannick Egges
-INSERT INTO TEAMS VALUES (2,"A","1","Niklas Leeuwin") Brandon van der Aardweg
-INSERT INTO TEAMS VALUES (3,"A","2","Valentijn Vermeij") Kiete van der Laan
-INSERT INTO TEAMS VALUES (4,"A","2","Brendan Mcdade")Riecardo den Haan
-INSERT INTO TEAMS VALUES (5,"A","2","Mellanie Palabos") Angelique Verweij
-INSERT INTO TEAMS VALUES (6,"A","3","Lara Los") Tessa Hoogeterp
-INSERT INTO TEAMS VALUES (7,"A","3","Vincent van den Heuvel") Boris Braam
-INSERT INTO TEAMS VALUES (8,"A","3","Faye Sifneos") Lara Wegloop
-INSERT INTO TEAMS VALUES (9,"B","1","Alice Rijcken") Ton Velzeboer
-INSERT INTO TEAMS VALUES (10,"B","1","Johanni Pfeiffer") Adolf Habets
-INSERT INTO TEAMS VALUES (11,"B","1","Michel Schuivens") Ton ten Holder
-INSERT INTO TEAMS VALUES (12,"B","1","Theo Roos") Ton Out
+INSERT INTO TEAMS VALUES (1,"A","1","Cuno Nasserie")
+INSERT INTO TEAMS VALUES (2,"A","1","Sjoerd Brouwer")
+INSERT INTO TEAMS VALUES (3,"A","1","Niklas Leeuwin")
+INSERT INTO TEAMS VALUES (4,"A","2","Valentijn Vermeij")
+INSERT INTO TEAMS VALUES (5,"A","2","Brendan Mcdade")
+INSERT INTO TEAMS VALUES (6,"A","2","Mellanie Palabos")
+INSERT INTO TEAMS VALUES (7,"A","3","Lara Los")
+INSERT INTO TEAMS VALUES (8,"A","3","Vincent van den Heuvel")
+INSERT INTO TEAMS VALUES (9,"A","3","Faye Sifneos")
+INSERT INTO TEAMS VALUES (10,"B","1","Alice Rijcken")
+INSERT INTO TEAMS VALUES (11,"B","1","Johanni Pfeiffer")
+INSERT INTO TEAMS VALUES (12,"B","1","Michel Schuivens")
+INSERT INTO TEAMS VALUES (13,"B","1","Theo Roos")
+
+INSERT INTO LEDEN VALUES (0, 'Cuno Nasserie', 'Nogwatlaan 3', '2406LX', 'Alphen a/d Rijn', '0640317786', '200--06-12','m', 1);
+INSERT INTO LEDEN VALUES (1, 'Rick Lodewijcks', 'Lindelaan 5', '1102TF', 'Amsterdam', '0628463727', 'm', '2000-06-12', 1);
+INSERT INTO LEDEN VALUES (2, 'Sjoerd Brouwer', 'Peterlaan 17', '2171AD', 'Aalsmeer', '9435678125', 'm', '2000-10-19', 2);
+INSERT INTO LEDEN VALUES (3, 'Yannick Egges', 'Melkweg 14', '2173DD', 'Aalsmeer', '2451679835', 'm', '2000-04-18', 2);
+INSERT INTO LEDEN VALUES (4, 'Niklas Leeuwin', 'Felix Meritus 666', '3482AF', 'Mijdrecht', '1645283765', 'm', '2000-04-18', 3);
+INSERT INTO LEDEN VALUES (5, 'Brandon van der Aardweg', 'Mijnweg 4', '3483FD', 'Mijdrecht', '9465873154', 'm', '2000-04-18', 3);
+INSERT INTO LEDEN VALUES (6, 'Valentijn Vermeij', 'Tara van Alphen weg 8', '1183GF', 'Amstelveen', '9465378465', 'm', '2000-04-18', 4);
+INSERT INTO LEDEN VALUES (7, 'Kiete van der Laan', 'Dijkweg 122', '6032PT', 'Haarlem', '4576598356', 'v', '2000-04-18', 4);
+INSERT INTO LEDEN VALUES (8, 'Brendan Mcdade', 'Mcdude straat 4', '4132IU', 'Uithoorn', '2451356497', 'm', '2000-04-18', 5);
+INSERT INTO LEDEN VALUES (9, 'Riecardo den Haan', 'Schefe Bomenlaan 24', '1188AG', 'Nes a/d Amstel', '6497583154', 'm', '2000-04-18', 5);
+INSERT INTO LEDEN VALUES (10, 'Mellanie Palabos', 'Lange Lindelaan 82', '1185BG', 'Amstelveen', '6497584316', 'v', '2000-04-18', 6);
+INSERT INTO LEDEN VALUES (11, 'Angelique Verweij', 'Korte Lindelaan 82', '2175IU', 'Aalsmeer', '6798355244', 'v', '2000-04-18', 6);
+INSERT INTO LEDEN VALUES (12, 'Lara Los', 'The Middle Of No Where 0', '0000OO', 'Mexico', '4446597813', 'v', '2000-04-18', 7);
+INSERT INTO LEDEN VALUES (13, 'Tessa Hoogeterp', 'Aardappelstraat 25', '1188GB', 'Nes a/d Amstel', '6497851342', 'v', '2000-04-18', 7);
+INSERT INTO LEDEN VALUES (14,'Vincent van den Heuvel','Annapolaklaan 10','1187TD','Amstelveen','3164578965','m','2000-03-11',8);
+INSERT INTO LEDEN VALUES (15,'Boris Braam','Rapportlaan 12','4133GF','Uithoorn','6431598752','m','2000-06-28',8);
+INSERT INTO LEDEN VALUES (16,'Faye Sifneos','Annapolaklaan 6','1187PX','Amstelveen','6497853645','v','1964-06-26',9);
+INSERT INTO LEDEN VALUES (17,'Lara Wegloop','Nieuwe weg 15','2172TY','Aalsmeer','9784653987','v','1986-04-04',9);
+INSERT INTO LEDEN VALUES (18,'Alice Rijcken','Literatuurstraat 14','2174AF','Aalsmeer','6497875346','v','1924-02-17',10);
+INSERT INTO LEDEN VALUES (19,'Johanni Pfeiffer','Volgordelaan 3','1183FD','Amstelveen','6541758476','m','1945-09-08',11);
+INSERT INTO LEDEN VALUES (20,'Ton Velzeboer','Foutieve straat 15','1185UC','Amstelveen','6431598752','m','2000-06-28',10);
+INSERT INTO LEDEN VALUES (21,'Adolf Habets','Liederenlaan 81','1184AF','Amstelveen','8967168314','m','1997-01-01',11);
+INSERT INTO LEDEN VALUES (22,'Michel Shuivens','Succes is een keuze 5','8031GV','Amsterdam','1386413561','m','1965-08-15',12);
+INSERT INTO LEDEN VALUES (23,'Ton ten Holder','Helpweg 14','4133DE','Uithoorn','1354641786','m','1935-07-04',12);
+INSERT INTO LEDEN VALUES (24,'Theo Roos','Pedolaan 5','1185PR','Amstelveen','1386315631','m','1959-06-13',13);
+INSERT INTO LEDEN VALUES (25,'Ton Out','Strengweg 7','1183QE','Amstelveen','1436814863','m','1968-05-27',13);
+
+INSERT INTO SCHEIDS VALUES (1, 'Albert Heijn', '1974-03-15', 'westwijkplein 25', '1186AS', 'amstelveen', '6487512345');
+INSERT INTO SCHEIDS VALUES (2, 'Robin Drory', '1998-09-21', 'judeviertel 24', '22', 'amsterdam', '6251849658');
+INSERT INTO SCHEIDS VALUES (3, 'Herman Schnitzel', '1998-08-21', 'Duitslaan 4', '2172YU', 'Aalsmeer', '9435678124');
+INSERT INTO SCHEIDS VALUES (4, 'Peter R. de Vries', '1998-08-23', 'Telegraaf 12', '1184AF', 'Amstelveen', '9487653254');
+INSERT INTO SCHEIDS VALUES (5, 'Abe Lucassen', '2001-08-14', 'straat 25', '2406FG', 'Alphen a/d Rijn', '9467581243');
+
+INSERT INTO WEDSTRIJDEN VALUES (1, '2017-12-13', 1, 'RODA Amstelveen', '5', '2-4');
+INSERT INTO WEDSTRIJDEN VALUES (2, '2017-11-28', 1, 'Thuis', '1', '5-5');
+INSERT INTO WEDSTRIJDEN VALUES (3, '2017-12-16', 2, 'RODA Amstelveen', '3', '6-0');
+INSERT INTO WEDSTRIJDEN VALUES (4, '2017-12-21', 1, 'RODA Amstelveen', '3', '3-0');
+INSERT INTO WEDSTRIJDEN VALUES (6, '2017-12-05', 4, 'Thuis', '7', '3-2');
+INSERT INTO WEDSTRIJDEN VALUES (7, '2017-12-06', 2, 'Thuis', '8', '2-4');
+INSERT INTO WEDSTRIJDEN VALUES (8, '2017-12-05', 3, 'Feyenoord', '1', '5-1');
+INSERT INTO WEDSTRIJDEN VALUES (8, '2017-12-07', 3, 'Thuis', '6', '1-1');
+INSERT INTO WEDSTRIJDEN VALUES (11, '2017-11-23', 5, 'Voetbal klub', '3', '3-5');
+INSERT INTO WEDSTRIJDEN VALUES (12, '2017-12-15', 4, 'RODA Amstelveen', '8', '1-4');
 
 INSERT INTO `leden` (`lidnr`, `naam`, `adres`, `postcode`, `plaats`, `telefoon`, `geslacht`, `geb_datum`, `team`) VALUES
 (1, 'Rick Lodewijcks', 'Lindelaan 5', '1102TF', 'Amsterdam', '0628463727', 'm', '2000-06-12', 1),
