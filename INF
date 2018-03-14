@@ -30,8 +30,10 @@ b) i: Gaat 1 blokje naar rechts
  c) a:(11,0)
     b:(0,11)
     c:(11,11)
-    
-   
+ 4.1
+   ik heb de snelheid variabel gemaakt zodat de vis sneller is an d vlooien en de haai sneller dan de vis
+     move(int);
+     random_range(int,int);
 
 
 
