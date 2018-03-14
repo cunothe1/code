@@ -1,0 +1,186 @@
+import greenfoot.*;
+import java.util.List;
+import java.util.ArrayList;
+
+/**
+ * Animal. This is the base class for all animals. In addition to the standard Actor
+ * methods, it provides the ability to move and turn.
+ * 
+ * @author Michael Kolling
+ * @version 1.0
+ */
+public class Animal extends Actor
+{
+   
+    
+    /**
+     * Constructor for Animal - nothing to do.
+     */
+    public Animal()
+    {
+    }
+
+    /**
+     * Turn a random amount of degrees, somewhere between -maxDegree and maxDegree
+     */
+    public void turnRandom (int maxDegree) {
+        if (maxDegree > 0) {
+            turn(Greenfoot.getRandomNumber(2*maxDegree) - (maxDegree));
+        }
+    }
+    
+    /**
+     * Act - empty method. Animals have no default action.
+     */
+    public void act()
+    {
+    }
+    
+    
+    /**
+     * Turn 'angle' degrees towards the right (clockwise).
+     */
+    public void turn(int angle)
+    {
+        setRotation(getRotation() + angle);
+    }
+    
+    
+    /**
+     * Test if we are close to one of the edges of the world. Return true is we are.
+     */
+    public boolean atWorldEdge()
+    {
+        if(getX() < 5 || getX() > getWorld().getWidth() - 5)
+            return true;
+        if(getY() < 5 || getY() > getWorld().getHeight() - 5)
+            return true;
+        else
+            return false;
+    }
+    //random      random_range(int,int);
+    public int random_range(int start,int end) {
+       int normal = Greenfoot.getRandomNumber(end-start+1);
+       return normal+start;
+    }
+    //Movement
+    public void move(int speed){
+      double angle = Math.toRadians( getRotation() );
+      int x = (int) Math.round(getX() + Math.cos(angle) * speed);
+      int y = (int) Math.round(getY() + Math.sin(angle) * speed);
+      setLocation(x, y); 
+    }
+    //atedge
+    public void restrain(){
+     if ( getX() < 5 ){
+         int x = room_width-6;
+         int y = getY();
+        setLocation(x,y);
+        }
+     if ( getX() > room_width-5 ){
+         int x = 6;
+         int y = getY();
+        setLocation(x,y);
+        }
+     if ( getY() < 5 ){
+         int x = getX();
+         int y = getY();
+        setLocation(x,y);
+        }
+     if ( getY() < room_height-5 ){
+         int x = getX();
+         int y = getY();
+        setLocation(x,y);
+        }
+    }
+    /**
+     * ADDING Game Maker Language Values
+     **/
+    //room_width
+    public int room_width = getWorld().getWidth();
+    public int room_height = getWorld().getHeight();
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
+
+/**
+ * A fish swims around in the sea and eats fleas. But be careful for sharks.
+ * 
+ */
+public class Fish extends Animal
+{
+    int speed=4;
+    /**
+     * Do what a fish has to do.
+     */
+    
+    public void act(){
+         if (Greenfoot.isKeyDown("A")) {
+            turn(-3);
+        }
+        if (Greenfoot.isKeyDown("D")) {
+            turn(3);
+        }
+        move(speed);
+    }
+    
+    
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
+
+/**
+ * Write a description of class vlooi here.
+ * 
+ * @author (your name) 
+ * @version (a version number or a date)
+ */
+public class vlooi extends Animal
+{
+    int speed=2;
+    /**
+     * Act - do whatever the vlooi wants to do. This method is called whenever
+     * the 'Act' or 'Run' button gets pressed in the environment.
+     */
+    public void act() 
+    {
+        turn(random_range(-5,5));
+        move(speed);
+    }    
+}
+
