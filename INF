@@ -1,3 +1,46 @@
+Dodo:
+1.2 Gedaan
+1.3
+a) gedaan
+b) Ja, langs maxwidth-1,y
+c) een waarde die waar of fout is, 1 of 0, dus een variabele die 1 van de 2 verschillende waardes heeft
+d) i: (4,1) , 3 eieren
+  ii: gedaan 0 is het antwoord
+ iii: Nee, er verandert niks
+e) 0, een int is kort voor integer, oftowel een nummer/getal
+f) Door te doen wat er in de tip staat.
+1.4
+a) void jump(int distance)
+b) i: Gaat 1 blokje naar rechts
+  ii: Zegt dat die niet kan bewegen
+ iii: a:step();
+      b:showError( "I'm stuck!" );
+      c:}
+ 1.5
+ a) BlueEgg is Egg
+    GoldenEgg is Egg
+ b) ja
+ c) void turnLeft()
+    void turnRight()
+ d) void move()
+    void jump(int distance)
+ 1.6
+ a) gedaan
+ b) (0,0)
+ c) a:(11,0)
+    b:(0,11)
+    c:(11,11)
+    
+   
+
+
+
+
+
+
+========================================================================================
+
+
 leerlingen klassen keuze1 keuze2
 reis stad plaatsen begeleiders prijs
 op de reis naar Praag kunnen 25 leerlingen mee, die worden begeleid door KCO, PVO
