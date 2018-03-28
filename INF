@@ -30,11 +30,68 @@ b) i: Gaat 1 blokje naar rechts
  c) a:(11,0)
     b:(0,11)
     c:(11,11)
- 
-
- 
-
-
+ 1.7
+ a) gedaan
+ b) getX() en getY()
+ c) getX         geeft X                   int
+    getY         geeft Y                   int
+   getDirection  geeft rotatie             int
+   setDirection  stelt rotatie in  Rotatie void
+ d) Get geeft de waard terug en set stelt de waarde in
+1.8
+ a) Dodo teleporteert een paar vakje
+ b) Hij zegt im stuck omdat het buiten de wereld is
+ c) cannot find variable
+ d) Omdat je met strngs niet kan rekenen en als text zjn bedoelt
+1.9
+a)
+ A if ( onEgg( ) )
+ B true
+ C return true
+ D true
+b) gedaan
+c) gedaan
+d) gedaan
+e) returns false/true
+f) Op het ei kan die geen ei leggen, als hij niet op een ei zit dan kan hij dat wel
+ public boolean canLayEgg( ){
+        if( onEgg() ){
+            return false;
+        }else{
+            return true;
+        }
+    }  public boolean canLayEgg( ){
+        if( onEgg() ){
+            return false;
+        }else{
+            return true;
+        }
+    } 
+1.10
+a)
+public void turn180( ) {
+   turnRight();
+   turnRight();
+}
+b) gedaan
+c) gedaan
+d) gedaan, gebeurt niks.
+e) geen fouten
+f) werkt zoals verwacht
+g)
+  /**
+  * Draait 180 graden   
+  */
+ h) gedaan
+1.11
+ a) gedaan
+ b) 
+ 1 	';' expected
+ 2  cannot find symbol
+ 3	invalid method declaration
+ 4
+ 5	')' expected
+ 6	'(' expected
 
 
 
