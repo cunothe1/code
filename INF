@@ -86,12 +86,14 @@ g)
 1.11
  a) gedaan
  b) 
- 1 	';' expected
- 2  cannot find symbol
- 3	invalid method declaration
- 4
- 5	')' expected
+ 1 	geen foutmelding
+ 2  geen foutmelding
+ 3	Illegal start of type
+ 4 	';' expected
+ 5	Illegal start of type
  6	'(' expected
+ c) gedaan
+ 
 
 
 
