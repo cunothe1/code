@@ -93,8 +93,39 @@ g)
  5	Illegal start of type
  6	'(' expected
  c) gedaan
- 
-
+1.12
+ a) gedaan
+ b) gedaan
+ c) gedaan
+ public void turn180() {
+      turnRight();
+      turnRight();
+      System.out.println("Ik ben net 180 graden gedraaid");
+     }
+1.13
+ a) gedaan
+ b) de distance variable is net ingvult
+ c)  public void jump( int distance ) {
+        int nrStepsTaken = 0;               // set counter to 0
+        while ( nrStepsTaken < distance ) { // check if more steps must be taken  
+            move();                         // take a step
+            nrStepsTaken++;                 // increment the counter
+        }
+        System.out.println("moved " + nrStepsTaken);
+    }
+ d) gedaan
+ e) gedaan
+1.14
+ a) gedaan
+ b) public void walkToWorldEdgePrintingCoordinates( ){
+        while( ! borderAhead() ){
+            System.out.println(getX()+","+getY());
+            move();
+        }
+    }
+ c) Nee, omdat het voor de move(); staat
+ d) was al gedaan
+1.15
 
 
 ========================================================================================
