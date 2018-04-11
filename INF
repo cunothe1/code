@@ -164,7 +164,7 @@ public boolean canMove() {
 2) gedaan, werkt zoals het hoort
 3) gedaan
 4) gedaan
-5) gedaan, wert zoals het hoort
+5) gedaan, werkt zoals het hoort
      /**
      * Climbs over a 1 high fence
      */
@@ -180,11 +180,54 @@ public boolean canMove() {
          turnLeft();
          }
     }
+2.5
+a) gedaan
+b)A onGrain( )
+  B Return to position
+  C Return to position
+  D move();
+  E turnLeft();turnLeft();move();turnLeft();turnLeft();
+  F turnLeft();turnLeft();move();turnLeft();turnLeft();
+c) gedaan, werkt zoals het hoort
+2.6
+a) gedaan
+b) Dat klopt want het ei staat ervoor
+c) move();
+d) while not on egg
+e) gotoEgg
+f) move();
+g) gedaan, werkt zoals het hoort
+    /**
+     * Dodo moves forward and sits on the egg.
+     * 
+     * <p> Initial:   Somewhere in a cell ahead of Dodo lies a egg. 
+     *                The cells between Dodo and the egg are empty.
+     * <p> Final:     Dodo has moved forward and is sitting on the egg.
+     *                      Dodo is facing original direction.
+     * 
+     */
+    public void gotoEgg( ) {
+    while( ! onEgg( ) ){
+        move();
+    }
+}
+2.6
+a) gedaan
+b)
+  A while not borderAhead()
+  B move();
+  C Dodo not at world edge
+  D At world edge
+c)
+void walkToWorldEdge(){
+  while (!borderAhead()){
+    move();
+      }
+    }
+
 
 
 ========================================================================================
-
-
 leerlingen klassen keuze1 keuze2
 reis stad plaatsen begeleiders prijs
 op de reis naar Praag kunnen 25 leerlingen mee, die worden begeleid door KCO, PVO
