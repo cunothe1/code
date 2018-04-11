@@ -125,7 +125,61 @@ g)
     }
  c) Nee, omdat het voor de move(); staat
  d) was al gedaan
-1.15
+
+
+
+
+
+
+
+
+
+2.1XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
+a) 2 keer void move();
+b)
+  A gotoEgg()
+  B void move();
+  C void move();
+  D Dodo is on th blue egg
+  E 
+  F
+
+2.3
+a) gedaan
+b) gedaan
+c) FenceAhead() bekijkt of er een hek voor de dodo staat
+d) gedaan
+e) gedaan, commentaar kan hetzelfde blijven
+f) gedaan, het werkt
+
+public boolean canMove() {
+        if ( borderAhead()||fenceAhead() ){
+            return false;
+        } else {
+            return true;
+        }
+    }
+2.4
+1) gedaan
+2) gedaan, werkt zoals het hoort
+3) gedaan
+4) gedaan
+5) gedaan, wert zoals het hoort
+     /**
+     * Climbs over a 1 high fence
+     */
+    public void climbOverFence(){
+       if (fenceAhead()){
+         turnLeft();
+         move();
+         turnRight();
+         move();
+         move();
+         turnRight();
+         move();
+         turnLeft();
+         }
+    }
 
 
 ========================================================================================
