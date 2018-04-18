@@ -134,15 +134,51 @@ g)
 
 
 
-2.1XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
+2.1
 a) 2 keer void move();
 b)
   A gotoEgg()
   B void move();
   C void move();
   D Dodo is on th blue egg
-  E 
-  F
+  E Dodo sits 2 tiles left from egg
+  F move();
+c) /**
+    * Dodo moves forward 2 steps and sits on the egg.
+    *
+    * <p>Initial situation:   Dodo sits 2 tiles left from egg
+    * <p>Final situation:     Dodo has moved forward and is sitting on the egg.
+    *                         Dodo is facing original direction.
+    *
+    * @param   nothing
+    * @return  nothing
+    */
+    public void gotoEgg( ) {
+       move();
+       move();
+    }
+ d) Het werkt
+2.2
+1) 
+Initial situaton : Dodo sits 3 tiles left from egg
+zet nog e extra move(); erbij
+
+2)public void gotoEgg( ) {
+    move();
+    move();
+    move();
+   }
+3)/**
+   * Dodo moves forward 2 steps and sits on the egg.
+   *
+   * <p>Initial situation:   Dodo sits 2 tiles left from egg
+   * <p>Final situation:     Dodo has moved forward and is sitting on the egg.
+   *                         Dodo is facing original direction.
+   *
+   * @param   nothing
+   * @return  nothing
+   */
+4) Het werkt
 
 2.3
 a) gedaan
