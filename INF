@@ -211,21 +211,99 @@ g) gedaan, werkt zoals het hoort
         move();
     }
 }
-2.6
+2.7
 a) gedaan
 b)
   A while not borderAhead()
   B move();
   C Dodo not at world edge
   D At world edge
-c)
-void walkToWorldEdge(){
-  while (!borderAhead()){
-    move();
+c) public void walkToWorldEdge(){
+      while (!borderAhead()){
+          move();
       }
     }
-
-
+d) Het werkt
+e) /**
+     * Draait 180 en loopt naar het einde en draait 180
+     */
+    public void goBackToStartOfRowAndFaceBack(){
+      turnLeft();
+      turnLeft();
+      while (!borderAhead()){
+        move();
+        }
+      turnLeft();
+      turnLeft();
+    }
+2.9
+a)
+in while borderahead, false
+fenceAhead?
+true: climbOverFence()
+false: move()
+b) /**
+     * Loopt naar het eind van de wereld
+     * Klimt over fences
+     */
+    public void walkToWorldEdge(){
+      while (!borderAhead()){
+        if (fenceAhead()){
+          climbOverFence();
+        }
+        else{
+          move();
+        }
+      }
+    }
+c) gedaan, het werkt
+2.10
+/**
+     * Loopt naar het eind van de wereld
+     * Klimt over fences
+     * Geeft een complimentje
+     */
+    public void walkToWorldEdge(){
+      while (!borderAhead()){
+        if (fenceAhead()){
+          climbOverFence();
+        }
+        else{
+          move();
+        }
+      }
+      if (borderAhead()){
+        showCompliment( "Gefeliciteerd!" );
+      }
+    }
+  2.11
+    /**
+     * Loopt naar het eind van de wereld
+     * Klimt over fences
+     * Geeft een complimentje
+     * Pakt graan op en print coordinaten
+     */
+    public void walkToWorldEdge(){
+      while (!borderAhead()){
+        if (onGrain()){
+          System.out.println ("Coördinaat:"+" X="+getX()+" Y="+getY());
+          pickUpGrain();
+          }
+        if (fenceAhead()){
+          climbOverFence();
+        }
+        else{
+          move();
+        }
+      }
+      if (onGrain()){
+        System.out.println ("Coördinaat:"+" X="+getX()+" Y="+getY());
+        pickUpGrain();
+        }
+      if (borderAhead()){
+        showCompliment( "Gefeliciteerd!" );
+      }
+    }
 
 ========================================================================================
 leerlingen klassen keuze1 keuze2
