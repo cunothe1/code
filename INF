@@ -104,7 +104,7 @@ g)
      }
 1.13
  a) gedaan
- b) de distance variable is net ingvult
+ b) de distance variable is niet ingvult
  c)  public void jump( int distance ) {
         int nrStepsTaken = 0;               // set counter to 0
         while ( nrStepsTaken < distance ) { // check if more steps must be taken  
@@ -224,7 +224,7 @@ b)A onGrain( )
   D move();
   E turnLeft();turnLeft();move();turnLeft();turnLeft();
   F turnLeft();turnLeft();move();turnLeft();turnLeft();
-c) gedaan, werkt zoals het hoort
+c) gedaan
 2.6
 a) gedaan
 b) Dat klopt want het ei staat ervoor
@@ -232,7 +232,7 @@ c) move();
 d) while not on egg
 e) gotoEgg
 f) move();
-g) gedaan, werkt zoals het hoort
+g) gedaan
     /**
      * Dodo moves forward and sits on the egg.
      * 
@@ -259,7 +259,7 @@ c) public void walkToWorldEdge(){
           move();
       }
     }
-d) Het werkt
+d) gedaan
 e) /**
      * Draait 180 en loopt naar het einde en draait 180
      */
@@ -292,7 +292,7 @@ b) /**
         }
       }
     }
-c) gedaan, het werkt
+c) gedaan
 2.10
 /**
      * Loopt naar het eind van de wereld
