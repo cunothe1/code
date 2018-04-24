@@ -101,14 +101,20 @@ sketch
           maakTransparanter();
          }
        }
-7)===================================
+7)
   c) addObject(Submarine(), 300,300); //in world
-  d) move(3); // in Submarine
-  e) if atWorldEdge(); turnAround(); // in Submarine
-  f) if atWorldEdge();
-     GreenfootSound(filename);
-     play();
-8)================================
+  d) in submarine
+     public void act{
+     move(3);
+     }
+  e) in Submarine
+     if (getX()==getWorld().getWidth()){
+       turnAround();
+       }
+  f) if (atWorldEdge()){
+     Greenfoot.playSound("flea.wav");
+     }
+8)
   public updown(){
     if isKeyDown("up"){
       setY(getY()+3);
@@ -117,26 +123,20 @@ sketch
       setY(getY()-3);
     }
   }
-9)=================================
-  a) stop(soundA); //in flea red
-     play(soundB);
-  b) 
-  c)
-  d)
   
   
 5
-1)==================================================
-  1) int aantalSlakroppen = 0;		             0
-  2) aantalSlakroppen = aantalSlakroppen + 1;	 1?	
-  3) aantalSlakroppen = 10;		                 10?
-  4) aantalSlakroppen = aantalSlakroppen * 2;	 20?
-  5) aantalSlakroppen = aantalSlakroppen / 5;  4?
-  6) int score;		                             4? error?
-  7) score = aantalSlakroppen;		             4? 4?
-  8) score = aantalSlakroppen + score;		     4? 8?
-  9) score == aantalSlakroppen		             4? error?
-2)========================
+1)
+  1) int aantalSlakroppen = 0;		         
+  2) aantalSlakroppen = aantalSlakroppen + 1;	 1	
+  3) aantalSlakroppen = 10;		         10
+  4) aantalSlakroppen = aantalSlakroppen * 2;	 20
+  5) aantalSlakroppen = aantalSlakroppen / 5;    4
+  6) int score;		                         4
+  7) score = aantalSlakroppen;		         4 4
+  8) score = aantalSlakroppen + score;		 4 8
+  9) score == aantalSlakroppen		         4 ERROR
+2)
 	a) paint(2); // in void act turtle
   b) // in public void checkKeyPress()
     if (Greenfoot.isKeyDown ("r")){
@@ -183,7 +183,7 @@ sketch
           stepCount ++;
           }  
   h) if (stepCount==1000) setLocation(getWorld().getWidth()/2,getWorld().getHeight()/2); //in void act
-3)===========================
+3)
   a) // mijn code, Een combinatie van deze code met een andere zorgt ervoor dat wanneer je een appel eet je langer je superkrachten hebt.
     if (mode==1){
       modeCount--;
