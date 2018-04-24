@@ -59,7 +59,7 @@ sketch
        beweeg();
        maakTransparanter();
        }
-6)=================================== // ANDERE METHODEN
+6)
   a) in CirkelWereld
     public CirkelWereld() {    
        super(600, 400, 1); 
