@@ -3,7 +3,7 @@ sketch
 1) 
   a) fout, geen goede verwijzing naar een void
   b) goed
-  c)================ fout, spelfout
+  c) fout, hoofdlettergevoelig
   d) fout, draaiOm heeft geen mogelijke parameters
   e) fout, mist een parameter
   f) goed
@@ -16,13 +16,13 @@ sketch
      }
      turn(18);
    }
-3) public Class Crab extends Animal {
+3) public class Crab extends Animal {
      public void act() {
-       move()
-       if (atWorldEdge) { 
-         turn 17;
+       move();
+       if (atWorldEdge()) { 
+         turn(17);
        }
-       eetAppels;
+       eetAppels();
      }
    }
 4)
@@ -32,28 +32,75 @@ sketch
      Set the speed of the execution.
   c) static void	stop()
      Pause the execution.
-5)=================================== // ANDERE METHODEN
-  a) in world
-  addObject( new Circkle(), 200, 100);
-  addObject( new Circkle(), 200, 200);
-  addObject( new Circkle(), 200, 300);
-  b) move(2); //in circle
-  c) turn(15); // in rood
-  d) move(2); // in geel
-  e) setTransparency(getTransparency()-2); // in geel
+5) in CirkelWereld
+  a) public CirkelWereld() {    
+       super(600, 400, 1); 
+       addObject( new CirkelGeel(), 200, 100);
+       addObject( new CirkelRood(), 200, 200);
+       addObject( new CirkelGroen(), 200, 300);
+       }
+  b) in CirkelGroen
+  public void act() {
+    beweeg();
+    }  
+  c) in CirkelRood
+  public void act(){
+      beweeg();
+      draai(5);
+    }
+  d) in CirkelGeel
+  public void act() {
+       beweeg();
+       beweeg();
+       }
+  e) in CirkelGeel
+  public void act() {
+       beweeg();
+       beweeg();
+       maakTransparanter();
+       }
 6)=================================== // ANDERE METHODEN
-  a) 
-  addObject( new Circkle(), 100, 100);
-  addObject( new Circkle(), 100, 200);
-  addObject( new Circkle(), 100, 300);
-  addObject( new Circkle(), 300, 100);
-  addObject( new Circkle(), 300, 200);
-  addObject( new Circkle(), 300, 300);
-  b) if borderAhead() turn(135); // in circle
-     move(2);
-  c) if borderAhead() turn(-270); // in groen
-  d) if isTouching(cricle.class) move(-2); // in rood 
-  e) if isTouching(yellow.class) setTransparency(getTransparency()-20);
+  a) in CirkelWereld
+    public CirkelWereld() {    
+       super(600, 400, 1); 
+       addObject( new CirkelGeel(), 100, 100);
+       addObject( new CirkelRood(), 100, 200);
+       addObject( new CirkelGroen(), 100, 300);
+       addObject( new CirkelGeel(), 300, 100);
+       addObject( new CirkelRood(), 300, 200);
+       addObject( new CirkelGroen(), 300, 300);
+       }
+  b) if (bijRandWereld()){
+          draai(-135);
+          }
+  c)  in groen
+    public void act() { 
+       beweeg();
+       if (bijRandWereld()){
+          draai(-135);
+          }
+       }  
+  d) in rood 
+  public void act(){
+       if (bijRandWereld()){
+          draai(-135);
+          }
+       draai(5);
+       if (raaktGeenCirkel()){
+          beweeg();
+          }
+    }
+  e) in geel
+    public void act() {
+       if (bijRandWereld()){
+          draai(-135);
+          }
+       beweeg();
+       beweeg();
+       if (raaktGelijkeCirkel()){
+          maakTransparanter();
+         }
+       }
 7)===================================
   c) addObject(Submarine(), 300,300); //in world
   d) move(3); // in Submarine
