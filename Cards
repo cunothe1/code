@@ -27,4 +27,18 @@ string_copy(origindeck, a, a+1)
 
 
 
+@echo off
+set origindeck=HaH2H3H4H5H6H7H8H9H0HbHvHhRaR1R2R3R4R5R6R7R8R9R0RbRvRhKaK2K3K4K5K6K7K8K9K0KbKvKhSaS2S3S4S5S6S7S8S9S0SbSvShOjOjOj
+set originnum=55
+set a=%origindeck%
+set b=%originnum%
+:random
+set /a c=%RANDOM%*%b%/32767w
+set d=a:~%c%,2
+call set e=%%%d%%%
+echo %e%
+pause
+goto :random
+
+
 
