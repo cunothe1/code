@@ -5,8 +5,15 @@ Dobbelsteen
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1 ">
 <title>Hey</title>
+</head>
+<body>
+
+<form action="index.php" method="post">
+<input type="submit" name="done" value="done" />
+</form>
+
 <?php
-if(isset($_POST["verzend"])) 
+if(isset($_POST["done"])) 
  {
  $r = rand(1,6);
  switch($r) 
@@ -24,12 +31,7 @@ else
  echo "roll";
  }
 ?>
-</head>
-<body>
 
-<form action="index.php" method="post">
-<input type="submit" name="verzend" value="done" />
-</form>
 </body>
 </html>
 
@@ -38,9 +40,18 @@ Raad het getal
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1 ">
-<title>https://informatica.ghlyceum.nl/users/38348/index.php</title>
+<title>Hey</title>
+</head>
+<body>
+
+Raad het getal van de computer! (tussen 1 en 100)
+<form action="index.php" method="post">
+<input type="text" name="input">
+<input type="submit" name="done" value="raad!">
+</form>
+
 <?php
-if (isset($_POST["verzend"])) {
+if (isset($_POST["done"])) {
   $p = $_POST["input"];
   $r = rand(1,100);
   if (floor($p)-$p!=0||$p<1||$p>100) echo "Alleen héle getallen! en tussen de 1 en 100<br>";
@@ -49,17 +60,10 @@ if (isset($_POST["verzend"])) {
   elseif ($p==$r) echo "!!!Goed geraden!!!!<br>";
   }
 ?>
-</head>
-<body>
 
-Raad het getal van de computer! (tussen 1 en 100)
-<form action="index.php" method="post">
-<input type="text" name="input">
-<input type="submit" name="verzend" value="raad!">
-</form>
 </body>
 </html>
 
-Raad het getal 2
+Rekenmachine
 -----------------------------------------------------------------------------------------------------
 
