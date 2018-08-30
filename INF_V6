@@ -27,6 +27,6 @@ else
 <body>
 
 <form action="index.php" method="post">
-<input type="submit" name="verzend" value="WERP" />
+<input type="submit" name="verzend" value="done" />
 </form></body>
 -----------------------------------------------------------------------------------------------
