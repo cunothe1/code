@@ -66,4 +66,47 @@ if (isset($_POST["done"])) {
 
 Rekenmachine
 -----------------------------------------------------------------------------------------------------
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1 ">
+<title>Hey</title>
+
+</head>
+<body>
+
+<form action="index.php" method="post">
+Getal 1: <input type="text" name="a"><br><br>
+Getal 2: <input type="text" name="b"><br><br>
+<input type="submit" name="sum" value="+">
+<input type="submit" name="sub" value="-">
+<input type="submit" name="mul" value="x">
+<input type="submit" name="div" value=":">
+</form>
+
+
+<?php
+if(isset($_POST["sum"])) {
+    echo $_POST["a"]; echo " + "; echo $_POST["b"]; echo " = ";echo $_POST["a"]+$_POST["b"];
+    }
+if(isset($_POST["sub"])) {
+    echo $_POST["a"]; echo " - "; echo $_POST["b"]; echo " = ";echo $_POST["a"]-$_POST["b"];
+    }
+if(isset($_POST["mul"])) {
+    echo $_POST["a"]; echo " x "; echo $_POST["b"]; echo " = ";echo $_POST["a"]*$_POST["b"];
+    }
+if(isset($_POST["div"])) {
+    if ($_POST["b"]!=0) {
+        echo $_POST["a"]; 
+        echo " : "; 
+        echo $_POST["b"]; 
+        echo " = ";
+        echo $_POST["a"]/$_POST["b"];
+        } else {
+        echo "Een Casio zou zeggen: MATH ERROR";
+        }
+    }
+?>
+
+</body>
+</html>
 
