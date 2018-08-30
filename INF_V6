@@ -1,1 +1,32 @@
 
+Dobbelsteen
+====================================================================================================
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1 ">
+<title>Hey</title>
+<?php
+if(isset($_POST["verzend"])) 
+ {
+ $r = rand(1,6);
+ switch($r) 
+  {
+  case"1": echo "1";break;
+  case"2": echo "2";break;
+  case"3": echo "3";break;
+  case"4": echo "4";break;
+  case"5": echo "5";break;
+  case"6": echo "6";break;
+  }
+ }
+else 
+ {
+ echo "roll";
+ }
+?>
+</head>
+<body>
+
+<form action="index.php" method="post">
+<input type="submit" name="verzend" value="WERP" />
+</form></body>
+-----------------------------------------------------------------------------------------------
