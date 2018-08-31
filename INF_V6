@@ -156,4 +156,52 @@ if (isset($_POST["g"])) echo $ad[rand(0,73)];
 </body>
 </html>
 
+random woord gen 2
+--------------------------------------------------------------------------------------------------------------------------------
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1 ">
+<title>https://informatica.ghlyceum.nl/users/38348/index.php</title>
+</head>
+<body>
 
+<form action="index.php" method="post">
+<input type="submit" name="a" value="abcb">
+<input type="submit" name="b" value="bcbd">
+<input type="submit" name="c" value="cbcbd">
+<input type="submit" name="d" value="a">
+<input type="submit" name="e" value="b">
+<input type="submit" name="f" value="c">
+<input type="submit" name="g" value="d">
+</form>
+
+<?php
+if (isset($_POST["a"])||isset($_POST["b"])||isset($_POST["c"])||isset($_POST["d"])||isset($_POST["e"])||isset($_POST["f"])||isset($_POST["g"])){
+$aa=array("ad","ak","al","ar","at","b","c","cr","d","dr","ekt","en","er","es","et","etr","f","fh","g","gr","h","hl","idr","ik","il","in","it","j","j","j","k","kn","kr","l","m","ncr","ndr","ngr","nkr","ntj","nz","ok","ol","od","ot","on","op","ov","q","qr","q","q","r","s","sk","skr","sn","t","th","tr","ntr","ub","ur","uks","v","vl","vz","vz","w","wr","y","yw","z","pr","p","pf");
+$ab=array("a","e","o","u","i","y","a","e","o","i","a","e","i","a","i","ao","ea","he","ha","ey","a","oi");
+$ac=array("hr","d","d","m","l","rch","rg","rt","t","tr","bl","nc","t","lst","st","lt","r","kr","rg","sr","kt","n","st","th","cr","ll","c","v","th","k","mp","dr","b","tm","gl","kw","kt","rg","p","ct","z","b","c","d","f","g","h","j","k","l","m","n","p","q","r","q","r","s","t","v","w","x","y","z","k","sk");
+$ad=array("c","ks","sk","d","th","th","tch","a","a","nq","rt","ld","rc","x","d","lb","w","ks","sk","d","th","th","rch","a","a","nq","rt","ld","rc","x","d","lb","x","ks","sk","d","th","th","rch","a","a","uuh","rt","ld","rc","x","d","lb","k","a","a","b","c","d","e","g","j","k","l","m","n","o","o","r","s","t","t","d","d","t","k","u","v");
+//$a=$aa[rand(0,76)];
+//$b=$ab[rand(0,23)];
+//$c=$ac[rand(0,63)];
+//$d=$ad[rand(0,73)];
+}
+if (isset($_POST["a"])) {
+echo $aa[rand(0,76)];echo $ab[rand(0,23)];echo $ac[rand(0,63)];echo $ad[rand(0,73)];
+}elseif (isset($_POST["b"])) {
+echo $ab[rand(0,23)];echo $ac[rand(0,63)];echo $ab[rand(0,23)];echo $ad[rand(0,73)];
+}elseif (isset($_POST["c"])) {
+echo $ac[rand(0,63)];echo $ab[rand(0,23)];echo $ac[rand(0,63)];echo $ab[rand(0,23)];echo $ad[rand(0,73)];
+}elseif (isset($_POST["d"])) {
+echo $aa[rand(0,76)];
+}elseif (isset($_POST["e"])) {
+echo $ab[rand(0,23)];
+}elseif (isset($_POST["f"])) {
+echo $ac[rand(0,63)];
+}elseif (isset($_POST["g"])) {
+echo $ad[rand(0,73)];
+}
+?>
+
+</body>
+</html>
