@@ -258,3 +258,37 @@ Raad het getal van de computer! (tussen 1 en 100)
 </body>
 </html>
 
+
+yu gi oh
+-----------------------------------------------------------------------------------------------------------------
+<input type="image" src="FILEPATH" onclick="AjaxResponse()" name="foo" id="button" value="bar">
+
+<?php
+session_start();
+if (isset($_POST["card"])) {
+if (isset($_SESSION["kart"])) {
+  $kaart=$_SESSION["kart"]+1;
+  } else $kaart = 1;
+} else $kaart = 1;
+
+
+
+?>
+
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1 ">
+<title>https://informatica.ghlyceum.nl/users/38348/index.php</title>
+</head>
+<body>
+
+<form action="index.php" method="post">
+<input type="image" src="kaart<?php echo"$kaart"; ?>.jpg" name="card" />
+</form>
+
+<?php
+
+?>
+
+</body>
+</html>
