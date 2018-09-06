@@ -243,17 +243,18 @@ Raad het getal van de computer! (tussen 1 en 100)
 </form>
 
 <?php
-  $r=$_SESSION["r"];
-  $t=$_SESSION["t"];
-  if (isset(($_SESSION["p"])){
-  $p=$_SESSION["p"];
-  if (floor($p)-$p!=0||$p<1||$p>100) echo "Alleen héle getallen! en tussen de 1 en 100<br>";
-  elseif ($p<$r) echo "Het was hoger!<br>";
-  elseif ($p>$r) echo "Het was lager!<br>";
-  elseif ($p==$r) echo "!!!Goed geraden!!!!<br>";
+  if (isset($_SESSION["r"])) $r=$_SESSION["r"];
+  if (isset($_SESSION["t"])) $t=$_SESSION["t"];
+  if (isset($_SESSION["p"])){
+    $p=$_SESSION["p"];
+    if (floor($p)-$p!=0||$p<1||$p>100) echo "Alleen héle getallen! en tussen de 1 en 100<br>";
+    elseif ($p<$r) echo "Het was hoger!<br>";
+    elseif ($p>$r) echo "Het was lager!<br>";
+    elseif ($p==$r) echo "!!!Goed geraden!!!!<br>";
   }
-  echo "Al $t x geraden"
+  if (isset($t)) echo "Al $t x geraden";
 ?>
 
 </body>
 </html>
+
