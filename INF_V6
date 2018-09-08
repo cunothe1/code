@@ -293,6 +293,131 @@ $_SESSION["kart"] = $kaaart;
 </body>
 </html>
 
+boodschappenlijstje
+-----------------------------------------------------------------------------------------------
+<?php
+session_start();
+if (isset($_POST["add"])){
+  if (isset($_POST["a"])) {
+    $_SESSION["a"] = "hey";
+    $_SESSION["aa"] = $_POST["aa"];
+    }
+  if (isset($_POST["b"])) {
+    $_SESSION["b"] = "hey";
+    $_SESSION["ab"] = $_POST["ab"];
+    }
+  if (isset($_POST["c"])) {
+    $_SESSION["c"] = "hey";
+    $_SESSION["ac"] = $_POST["ac"];
+    }
+  if (isset($_POST["d"])) {
+    $_SESSION["d"] = "hey";
+    $_SESSION["ad"] = $_POST["ad"];
+    }
+  if (isset($_POST["e"])) {
+    $_SESSION["e"] = "hey";
+    $_SESSION["ae"] = $_POST["ae"];
+    }
+  if (isset($_POST["f"])) {
+    $_SESSION["f"] = "hey";
+    $_SESSION["af"] = $_POST["af"];
+    }
+  if (isset($_POST["g"])) {
+    $_SESSION["g"] = "hey";
+    $_SESSION["ag"] = $_POST["ag"];
+    }
+  if (isset($_POST["h"])) {
+    $_SESSION["h"] = "hey";
+    $_SESSION["ah"] = $_POST["ah"];
+    }
+}
+if (isset($_POST["subtract"])){
+  if (isset($_POST["a"])) {
+    unset($_SESSION["a"]);
+    unset($_SESSION["aa"]);
+    }
+  if (isset($_POST["b"])) {
+    unset($_SESSION["b"]);
+    unset($_SESSION["ab"]);
+    }
+  if (isset($_POST["c"])) {
+    unset($_SESSION["c"]);
+    unset($_SESSION["ac"]);
+    }
+  if (isset($_POST["d"])) {
+    unset($_SESSION["d"]);
+    unset($_SESSION["ad"]);
+    }
+  if (isset($_POST["e"])) {
+    unset($_SESSION["e"]);
+    unset($_SESSION["ae"]);
+    }
+  if (isset($_POST["f"])) {
+    unset($_SESSION["f"]);
+    unset($_SESSION["af"]);
+    }
+  if (isset($_POST["g"])) {
+    unset($_SESSION["g"]);
+    unset($_SESSION["ag"]);
+    }
+  if (isset($_POST["h"])) {
+    unset($_SESSION["h"]);
+    unset($_SESSION["ah"]);
+    }
+};
+?>
 
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1 ">
+<title>https://informatica.ghlyceum.nl/users/38348/index.php</title>
+</head>
+<body>
+
+<form action="index.php" method="post"><table><tbody>
+<tr><td><input name="a" value="j" type="checkbox"> Chips</td><td>
+<select name="aa"><option value="">- Kies aantal -</option><option value="1">1</option><option value="2">2</option><option value="3">3</option><option value="4">4</option><option value="5">5</option>
+</select></td></tr>
+<tr><td><input name="b" value="j" type="checkbox"> Chocolade Reep</td><td>
+<select name="ab"><option value="">- Kies aantal -</option><option value="1">1</option><option value="2">2</option><option value="3">3</option><option value="4">4</option><option value="5">5</option>
+</select></td></tr>
+<tr><td><input name="c" value="j" type="checkbox"> Chocomelk</td><td>
+<select name="ac"><option value="">- Kies aantal -</option><option value="1">1</option><option value="2">2</option><option value="3">3</option><option value="4">4</option><option value="5">5</option>
+</select></td></tr>
+<tr><td><input name="d" value="j" type="checkbox"> Chocolate Chip Cookies</td><td>
+<select name="ad"><option value="">- Kies aantal -</option><option value="1">1</option><option value="2">2</option><option value="3">3</option><option value="4">4</option><option value="5">5</option>
+</select></td></tr>
+<tr><td><input name="e" value="j" type="checkbox"> Cake</td><td>
+<select name="ae"><option value="">- Kies aantal -</option><option value="1">1</option><option value="2">2</option><option value="3">3</option><option value="4">4</option><option value="5">5</option>
+</select></td></tr>
+<tr><td><input name="f" value="j" type="checkbox"> Jelly Beans</td><td>
+<select name="af"><option value="">- Kies aantal -</option><option value="1">1</option><option value="2">2</option><option value="3">3</option><option value="4">4</option><option value="5">5</option>
+</select></td></tr>
+<tr><td><input name="g" value="j" type="checkbox"> Vanille Ijs</td><td>
+<select name="ag"><option value="">- Kies aantal -</option><option value="1">1</option><option value="2">2</option><option value="3">3</option><option value="4">4</option><option value="5">5</option>
+</select></td></tr>
+<tr><td><input name="h" value="j" type="checkbox"> Drie Kleuren Ijs </td><td>
+<select name="ah"><option value="">- Kies aantal -</option><option value="1">1</option><option value="2">2</option><option value="3">3</option><option value="4">4</option><option value="5">5</option>
+</select></td></tr>
+<tr>
+<td><input name="add" value="Voeg toe aan boodschappenlijst" type="submit"></td>
+<td><input name="subtract" value="Verwijder uit boodschappenlijst" type="submit"></td>
+</tr>
+</tbody></table>
+</form>
+
+<?php
+if (isset($_SESSION["a"])) echo "$_SESSION[aa] Chips <br>";
+if (isset($_SESSION["b"])) echo "$_SESSION[ab] Chocolade Reep<br>";
+if (isset($_SESSION["c"])) echo "$_SESSION[ac] Chocomelk<br>";
+if (isset($_SESSION["d"])) echo "$_SESSION[ad] Chocolate Chip<br>";
+if (isset($_SESSION["e"])) echo "$_SESSION[ae] Cake<br>";
+if (isset($_SESSION["f"])) echo "$_SESSION[af] Jelly Beans<br>";
+if (isset($_SESSION["g"])) echo "$_SESSION[ag] Vanille Ijs<br>";
+if (isset($_SESSION["h"])) echo "$_SESSION[ah] Drie Kleuren Ijs<br>";
+?>
+
+</body>
+</html>
 
 
