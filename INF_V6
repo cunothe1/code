@@ -261,16 +261,11 @@ Raad het getal van de computer! (tussen 1 en 100)
 
 yu gi oh
 -----------------------------------------------------------------------------------------------------------------
-<input type="image" src="FILEPATH" onclick="AjaxResponse()" name="foo" id="button" value="bar">
-
 <?php
 session_start();
-if (isset($_POST["card"])) {
 if (isset($_SESSION["kart"])) {
-  $kaart=$_SESSION["kart"]+1;
-  } else $kaart = 1;
-} else $kaart = 1;
-
+$kaaart=$_SESSION["kart"];
+} else $kaaart = 1;
 
 
 ?>
@@ -283,12 +278,21 @@ if (isset($_SESSION["kart"])) {
 <body>
 
 <form action="index.php" method="post">
-<input type="image" src="kaart<?php echo"$kaart"; ?>.jpg" name="card" />
+<input type="hidden" name="card" value="<?php echo"$kaaart"; ?>" />
+<input type="image" src="kaart<?php echo"$kaaart"; ?>.jpg"/>
 </form>
 
 <?php
-
+if (isset($_POST["card"])) {
+$kaaart = $_SESSION["kart"] + 1;
+if ($kaaart == 4) $kaaart = 1;
+$_SESSION["kart"] = $kaaart;
+}
 ?>
 
 </body>
 </html>
+
+
+
+
