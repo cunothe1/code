@@ -700,3 +700,88 @@ if($_SESSION["speler2"]==10){echo"&nbsp;<img src='player2.jpg' alt='' />";}
 </table>
   </body>
 </html>
+
+
+Kleurklik, NOPE YU GI OH KLIK!
+XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
+XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
+XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
+<?php
+if (isset($_GET["a"])) $url=$_GET["a"];
+
+
+?>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1 ">
+<title>Hey</title>
+<style>
+form {
+    display: inline-block; //Or display: inline; 
+}
+</style>
+</head>
+<body>
+
+<?php
+if (isset($_GET["a"])&&$_GET["a"]==1) echo "<!--";
+?>
+<form action="index.php?a=1" method="post">
+<input type="hidden" name="done" value="done" />
+<input type="image" src="kaart1.jpg"/>
+</form>
+<?php
+if (isset($_GET["a"])&&$_GET["a"]==1) echo "-->";
+else echo "<!--"
+?>
+<img src="kaart1.jpg"></img>
+<?php
+if (isset($_GET["a"])&&$_GET["a"]!=1) echo "-->";
+if (isset($_GET["a"])&&$_GET["a"]==2) echo "<!--";
+?>
+<form action="index.php?a=2" method="post">
+<input type="hidden" name="done" value="done" />
+<input type="image" src="kaart2.jpg"/>
+</form>
+<?php
+if (isset($_GET["a"])&&$_GET["a"]==2) echo "-->";
+else echo "<!--"
+?>
+<img src="kaart2.jpg"></img>
+<?php
+if (isset($_GET["a"])&&$_GET["a"]!=2) echo "-->";
+if (isset($_GET["a"])&&$_GET["a"]==3) echo "<!--";
+?>
+<form action="index.php?a=3" method="post">
+<input type="hidden" name="done" value="done" />
+<input type="image" src="kaart3.jpg"/>
+</form>
+<?php
+if (isset($_GET["a"])&&$_GET["a"]==3) echo "-->";
+else echo "<!--"
+?>
+<img src="kaart3.jpg"></img>
+<?php
+if (isset($_GET["a"])&&$_GET["a"]!=3) echo "-->";
+?>
+<br>
+<?php
+if (isset($_GET["a"])&&$_GET["a"]==1) {
+echo "Je koos Galaxy-Eyes Photon Dragon";
+}
+if (isset($_GET["a"])&&$_GET["a"]==2) {
+echo "Je koos Blue-Eyes White Dragon";
+}
+if (isset($_GET["a"])&&$_GET["a"]==3) {
+echo "Je koos Five-Headed Dragon";
+}
+?>
+
+</body>
+</html>
+
+
+
+XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
+XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
+XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
