@@ -495,13 +495,14 @@ XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
 XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
 <?php
 session_start();
-
 if (isset($_POST["reset"])){
 	session_destroy();
 	session_start();
 }
 ?>
+
 <!DOCTYPE html>
+
 <html lang="en">
   <head>
     <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1 ">
@@ -524,7 +525,6 @@ if (!isset($_SESSION["speler1"]))
  $_SESSION["speler1"] = 1;
  $_SESSION["speler2"] = 1;
 }
-
 // Hier wordt gecontroleerd of er al een speler aan de beurt is.
 // Zo niet, dan mag speler 1 beginnen en krijgt de dobbelsteen een startplaatje.
 if (!isset($_SESSION["beurt"]))
@@ -532,14 +532,12 @@ if (!isset($_SESSION["beurt"]))
  $_SESSION["beurt"] = 1;
  $_SESSION["dobbelsteen"] = 'dobbel3.gif';
 }
-
 // Hier wordt doorgegeven welke speler er met de dobbelsteen heeft gegooid.
-$speler = $_POST["speler"];
-
+if (isset($_POST["speler"])) $speler = $_POST["speler"];
 // Als speler 1 heeft gegooid, dan wordt zijn pion verzet, en gaat de beurt naar speler 2.
 // Hetzelfde voor speler 2.
-if ($speler == 1)
-{
+if (isset($_POST["speler"])) {
+if ( $speler == 1) {
  $worp = rand(1,6);
  $_SESSION["speler1"] = $_SESSION["speler1"] + $worp;
  if ($_SESSION["speler1"] > 17){
@@ -547,8 +545,9 @@ if ($speler == 1)
   $_SESSION["speler1"] = 17 - $worp;
  }
  $_SESSION["beurt"] = 2;
-}
-if ($speler == 2)
+} }
+
+if (isset($_POST["speler"]) && $speler == 2)
 {
  $worp = rand(1,6);
  $_SESSION["speler2"] = $_SESSION["speler2"] + $worp;
@@ -559,13 +558,14 @@ if ($speler == 2)
  $_SESSION["beurt"] = 1;
 }
 
+
 // Afhankelijk van de waarde van de worp krijgt de dobbelsteen een ander plaatje.
-if ($worp == 1){$_SESSION["dobbelsteen"] = 'dobbel1.gif';}
-if ($worp == 2){$_SESSION["dobbelsteen"] = 'dobbel2.gif';}
-if ($worp == 3){$_SESSION["dobbelsteen"] = 'dobbel3.gif';}
-if ($worp == 4){$_SESSION["dobbelsteen"] = 'dobbel4.gif';}
-if ($worp == 5){$_SESSION["dobbelsteen"] = 'dobbel5.gif';}
-if ($worp == 6){$_SESSION["dobbelsteen"] = 'dobbel6.gif';}
+if (isset($worp) && $worp == 1){$_SESSION["dobbelsteen"] = 'dobbel1.gif';}
+if (isset($worp) && $worp == 2){$_SESSION["dobbelsteen"] = 'dobbel2.gif';}
+if (isset($worp) && $worp == 3){$_SESSION["dobbelsteen"] = 'dobbel3.gif';}
+if (isset($worp) && $worp == 4){$_SESSION["dobbelsteen"] = 'dobbel4.gif';}
+if (isset($worp) && $worp == 5){$_SESSION["dobbelsteen"] = 'dobbel5.gif';}
+if (isset($worp) && $worp == 6){$_SESSION["dobbelsteen"] = 'dobbel6.gif';}
 ?>
 
 <table>
