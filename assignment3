@@ -1,0 +1,44 @@
+# int pow(int base, int exp){
+#   int total = 1;
+#   while (exp > 0){
+#     total *= base;
+#     exp --;
+#
+#   return total;
+#   }
+
+.text
+student1: .asciz "2764202: Berat Demir\n"    #Student 1 identifier
+student2: .asciz "2707772: Cuno Nasserie\n"  #Student 2 identifier
+assignment: .asciz "Assignment: inout\n"     #Assignment identifier
+prompt1: .asciz "Please enter a postive number for the base:\n"
+prompt2: .asciz "Please enter a postive number for the exponent:\n"
+
+.data
+input1:    .asciz "%ld"
+input2:    .asciz "%ld"
+
+.global main
+main:
+  pushq %rbp                                #store caller's base pointer
+  movq  %rsp, %rbp                          #initialize the base pointer
+
+  #call  credits                             #state assignment and contributers
+  
+  mov   $0, %rdi                            #report completion
+  call  exit                                #exit program
+  
+credits:
+  pushq %rbp                                #store caller's base pointer
+  movq  %rsp, %rbp                          #initialize the base pointer
+  
+  movq  $student1, %rdi                      #load student1
+  call  printf                               #print student1
+  movq  $student2, %rdi                      #load student2
+  call  printf                               #print student2
+  movq  $assignment, %rdi                    #load  assignment
+  call  printf                               #print assignment
+  
+  addq  $16, %rsp                             #clean the stack
+  ret
+  
